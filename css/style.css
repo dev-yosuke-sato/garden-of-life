@@ -135,15 +135,16 @@ ul {
 
 .header__nav-list a {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-items: center;
   overflow: hidden;
   text-transform: uppercase;
 }
 
 .header__nav-list a span {
   display: block;
+  grid-area: 1/1;
+  white-space: nowrap;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
@@ -152,8 +153,6 @@ ul {
 }
 
 .header__nav-list a .ja {
-  position: absolute;
-  top: 0;
   transform: translateY(100%);
   opacity: 0;
 }
@@ -848,15 +847,16 @@ ul {
 
 .footer__nav a {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  justify-items: center;
   overflow: hidden;
   text-transform: uppercase;
 }
 
 .footer__nav a span {
   display: block;
+  grid-area: 1/1;
+  white-space: nowrap;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
@@ -865,8 +865,6 @@ ul {
 }
 
 .footer__nav a .ja {
-  position: absolute;
-  top: 0;
   transform: translateY(100%);
   opacity: 0;
 }

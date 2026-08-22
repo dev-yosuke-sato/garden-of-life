@@ -32,15 +32,16 @@
 
 .footer__nav a {
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	display: grid;
+	justify-items: center;
 	overflow: hidden;
 	text-transform: uppercase;
 }
 
 .footer__nav a span {
 	display: block;
+	grid-area: 1 / 1;
+	white-space: nowrap;
 	transition: transform .4s ease, opacity .4s ease;
 }
 
@@ -49,8 +50,6 @@
 }
 
 .footer__nav a .ja {
-	position: absolute;
-	top: 0;
 	transform: translateY(100%);
 	opacity: 0;
 }
