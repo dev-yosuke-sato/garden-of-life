@@ -134,11 +134,38 @@ ul {
 }
 
 .header__nav-list a {
-  transition: opacity 0.2s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  text-transform: uppercase;
 }
 
-.header__nav-list a:hover {
-  opacity: 0.6;
+.header__nav-list a span {
+  display: block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.header__nav-list a .en {
+  transform: translateY(0);
+}
+
+.header__nav-list a .ja {
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.header__nav-list a:hover .en {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.header__nav-list a:hover .ja {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .header__tel {
@@ -477,7 +504,8 @@ ul {
 .about__portrait img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about__portrait-ring {
@@ -982,7 +1010,8 @@ ul {
 .work-card__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .work-card__image--placeholder {
@@ -1356,6 +1385,4 @@ ul {
     transform: none;
     transition: none;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
