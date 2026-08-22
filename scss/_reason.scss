@@ -1,0 +1,59 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+
+/* ========================================
+   Reason
+======================================== */
+.reason {
+	background: v.$gradient-reason;
+	padding: 100px 20px 120px;
+}
+
+.reason__inner {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.reason__list {
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+}
+
+.reason__item {
+	display: grid;
+	grid-template-columns: 90px 220px 1fr;
+	align-items: center;
+	gap: 20px;
+	padding: 32px 0;
+	border-top: 1px solid rgba(v.$color-navy, 0.3);
+}
+
+.reason__item:last-child { border-bottom: 1px solid rgba(v.$color-navy, 0.3); }
+
+.reason__index {
+	font-family: v.$font-serif;
+	font-size: 12px;
+	letter-spacing: 0.1em;
+}
+
+.reason__title {
+	font-family: v.$font-serif;
+	font-weight: 400;
+	font-size: 26px;
+}
+
+.reason__text {
+	font-size: 14px;
+	line-height: 1.8;
+}
+
+@media (max-width: v.$bp-md) {
+	.reason__item { grid-template-columns: 60px 1fr; grid-template-rows: auto auto; }
+	.reason__text { grid-column: 1 / -1; }
+}
+
+@media (max-width: v.$bp-sm) {
+	.reason__item { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+
+/* ========================================
+   Footer
+======================================== */
+.footer {
+	background: v.$gradient-header;
+	padding: 50px 40px 30px;
+}
+
+.footer__inner {
+	max-width: 1360px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.footer__logo img { height: 40px; width: auto; }
+
+.footer__nav {
+	display: flex;
+	gap: 40px;
+	font-family: v.$font-italiana;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+}
+
+.footer__copyright {
+	text-align: center;
+	font-family: v.$font-italiana;
+	font-weight: 400;
+	font-size: 12px;
+	letter-spacing: 0.05em;
+	margin-top: 30px;
+	color: v.$color-navy;
+}
+
+@media (max-width: v.$bp-sm) {
+	.footer__inner { flex-direction: column; text-align: center; }
+	.footer__nav { gap: 24px; }
+}

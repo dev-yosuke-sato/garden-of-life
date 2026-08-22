@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+
+/* ========================================
+   Marquee
+======================================== */
+.marquee {
+	overflow: hidden;
+	white-space: nowrap;
+	background-color: v.$color-pink;
+	padding: 24px 0;
+}
+
+.marquee__track {
+	display: inline-flex;
+	gap: 40px;
+	animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee__track--reverse {
+	animation-direction: reverse;
+}
+
+.marquee__track span {
+	font-family: v.$font-serif;
+	font-size: 48px;
+	color: rgba(v.$color-navy, 0.35);
+	letter-spacing: 0.05em;
+}
+
+@keyframes marquee-scroll {
+	from { transform: translateX(0); }
+	to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.marquee__track { animation: none; }
+}

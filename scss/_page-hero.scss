@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+
+/* ========================================
+   Page Hero（下層ページ）
+======================================== */
+.page-hero {
+	position: relative;
+	overflow: hidden;
+	min-height: 620px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	text-align: left;
+	padding: 150px 60px 60px;
+	background: v.$gradient-hero;
+}
+
+.page-hero__butterflies {
+	position: absolute;
+	top: -30px;
+	right: -60px;
+	width: 50%;
+	max-width: 700px;
+	pointer-events: none;
+}
+
+.page-hero__label {
+	position: relative;
+	z-index: 1;
+	font-family: v.$font-serif;
+	font-size: 56px;
+	letter-spacing: 0.08em;
+	color: v.$color-cream;
+}
+
+.page-hero__inner {
+	position: relative;
+	z-index: 1;
+}
+
+.page-hero__ja {
+	font-size: 15px;
+	letter-spacing: 0.2em;
+	color: v.$color-navy;
+}
+
+.page-hero__en {
+	margin-top: 12px;
+	font-family: v.$font-serif;
+	font-size: 52px;
+	color: v.$color-navy;
+}
+
+@media (max-width: v.$bp-md) {
+	.page-hero { padding: 130px 40px 50px; min-height: 520px; }
+	.page-hero__label { font-size: 44px; }
+}
+
+@media (max-width: v.$bp-sm) {
+	.page-hero { padding: 110px 24px 40px; min-height: 440px; }
+	.page-hero__label { font-size: 32px; }
+	.page-hero__en { font-size: 32px; }
+}

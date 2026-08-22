@@ -1,0 +1,47 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+
+/* ========================================
+   Hero
+======================================== */
+.hero {
+	position: relative;
+	height: 800px;
+	overflow: hidden;
+	background: v.$gradient-hero;
+	display: flex;
+	align-items: center;
+}
+
+.hero__butterflies {
+	position: absolute;
+	top: -30px;
+	right: -60px;
+	width: 58%;
+	max-width: 840px;
+	pointer-events: none;
+}
+
+.hero__title {
+	position: relative;
+	z-index: 1;
+	font-family: v.$font-serif;
+	font-weight: 400;
+	font-size: 72px;
+	line-height: 1.25;
+	letter-spacing: 0.05em;
+	color: v.$color-cream;
+	text-shadow: 4px 4px 20px rgba(v.$color-navy, 0.2);
+	padding-left: 8.3%;
+}
+
+@media (max-width: v.$bp-md) {
+	.hero__title { font-size: 48px; }
+}
+
+@media (max-width: v.$bp-sm) {
+	.hero { height: 600px; }
+	.hero__title { font-size: 34px; padding-left: 24px; }
+	.hero__butterflies { width: 80%; right: -100px; }
+}

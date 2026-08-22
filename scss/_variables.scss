@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+
+// ==========================================================================
+// Colors
+// ==========================================================================
+$color-navy: #244391;
+$color-block: #313536;
+$color-rose: #C76B90;
+$color-sky: #73C8E3;
+$color-sky-blue: #9FCAD4;
+$color-cream: #F7EEF3;
+$color-cream-deep: #F9F6F3;
+$color-tan: #E9D3AB;
+$color-base: #E7DCE6;
+
+$color-pink: #F2CACA;
+$color-pink-soft: #F0D6DC;
+
+$gradient-hero: linear-gradient(180deg, #9FCAD4 0%, #C9CFDB 55%, #E3DBE5 100%);
+$gradient-header: linear-gradient(88deg, rgb(236,226,235) 2%, rgb(196,211,221) 51%, rgb(242,202,202) 99%);
+$gradient-story: linear-gradient(180deg, #E3DBE5 0%, $color-pink 100%);
+$gradient-about: linear-gradient(180deg, $color-pink 0%, #E3C7CF 100%);
+$gradient-service: linear-gradient(180deg, #E3C7CF 0%, #CBBFC6 100%);
+$gradient-reason: linear-gradient(180deg, #CBBFC6 0%, #B2CED8 100%);
+$gradient-contact: linear-gradient(180deg, #B2CED8 0%, #9FCAD4 100%);
+$gradient-work: linear-gradient(180deg, $color-base 0%, #D7D8E2 100%);
+$gradient-work-feature: linear-gradient(120deg, #9FCAD4 0%, #C9CFDB 55%, $color-pink 100%);
+
+// ==========================================================================
+// Fonts
+// ==========================================================================
+$font-serif: 'Prata', serif;
+$font-italiana: 'Italiana', serif;
+$font-sans: 'Zen Kaku Gothic Antique', sans-serif;
+
+// ==========================================================================
+// Breakpoints
+// ==========================================================================
+$bp-md: 1024px;
+$bp-sm: 640px;

@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+
+/* ========================================
+   Contact
+======================================== */
+.contact {
+	position: relative;
+	overflow: hidden;
+	background: v.$gradient-contact;
+	padding: 100px 20px;
+	text-align: center;
+}
+
+.contact__butterflies {
+	position: absolute;
+	top: 0;
+	left: -40px;
+	width: 40%;
+	max-width: 560px;
+	pointer-events: none;
+}
+
+.contact__inner {
+	position: relative;
+	z-index: 1;
+}
+
+.contact__text {
+	font-size: 16px;
+	letter-spacing: 0.1em;
+	margin-top: 20px;
+}
+
+.contact__btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 40px;
+	padding: 18px 48px;
+	border: 1px solid v.$color-cream;
+	border-radius: 80px;
+	font-family: v.$font-serif;
+	font-size: 16px;
+	letter-spacing: 0.1em;
+	color: v.$color-cream;
+	transition: background-color .2s, color .2s;
+}
+
+.contact__btn img { width: 15px; height: 20px; filter: brightness(0) invert(1); }
+
+.contact__btn:hover {
+	background-color: v.$color-cream;
+	color: v.$color-navy;
+}
+.contact__btn:hover img { filter: none; }

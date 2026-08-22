@@ -477,8 +477,7 @@ ul {
 .about__portrait img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .about__portrait-ring {
@@ -588,12 +587,14 @@ ul {
 .service__num {
   font-family: "Prata", serif;
   font-size: 48px;
+  line-height: 1.15;
   color: #244391;
 }
 
 .service__name {
   font-family: "Prata", serif;
   font-size: 33px;
+  line-height: 1.15;
   color: #C76B90;
   letter-spacing: 0.05em;
   margin: 8px 0 10px;
@@ -601,7 +602,7 @@ ul {
 
 .service__desc {
   width: 100%;
-  height: 90px;
+  height: 96px;
   overflow: hidden;
   font-size: 20px;
   line-height: 1.5;
@@ -633,7 +634,7 @@ ul {
   }
   .service__desc {
     font-size: 17px;
-    height: 77px;
+    height: 83px;
   }
   .service__arrow {
     margin-top: 8px;
@@ -657,7 +658,7 @@ ul {
   }
   .service__desc {
     font-size: 14px;
-    height: 63px;
+    height: 69px;
   }
   .service__arrow {
     margin-top: 6px;
@@ -981,8 +982,7 @@ ul {
 .work-card__image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .work-card__image--placeholder {
@@ -1356,4 +1356,6 @@ ul {
     transform: none;
     transition: none;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */

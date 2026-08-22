@@ -1,0 +1,86 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+
+/* ========================================
+   ページ遷移演出（フェード＋フワッと開く挙動）
+======================================== */
+.page-transition {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+	background: v.$color-base;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .6s ease;
+}
+
+.js .page-transition {
+	opacity: 1;
+}
+
+.js body.is-loaded .page-transition {
+	opacity: 0;
+}
+
+.js body.is-leaving .page-transition {
+	opacity: 1;
+	pointer-events: auto;
+	transition: opacity .45s ease;
+}
+
+.js main {
+	opacity: 0;
+	transform: translateY(28px);
+	transition: opacity .9s cubic-bezier(.22, .61, .36, 1), transform .9s cubic-bezier(.22, .61, .36, 1);
+}
+
+.js body.is-loaded main {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.js body.is-leaving main {
+	opacity: 0;
+	transform: translateY(-16px);
+	transition: opacity .4s ease, transform .4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.js .page-transition,
+	.js main {
+		transition: opacity .2s linear !important;
+		transform: none !important;
+	}
+}
+
+/* ========================================
+   スクロールフェードイン（reveal）
+======================================== */
+.js .reveal {
+	opacity: 0;
+	transform: translateY(36px);
+	transition: opacity .9s ease, transform .9s ease;
+	will-change: opacity, transform;
+}
+
+.js .reveal.is-inview {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+@for $i from 1 through 8 {
+	.js .service__list > .reveal:nth-child(#{$i}),
+	.js .reason__list > .reveal:nth-child(#{$i}),
+	.js .work__list > .reveal:nth-child(#{$i}) {
+		transition-delay: $i * .1s;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.js .reveal {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}
