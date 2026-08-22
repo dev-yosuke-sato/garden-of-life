@@ -30,6 +30,41 @@
 	letter-spacing: 0.05em;
 }
 
+.footer__nav a {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+
+.footer__nav a span {
+	display: block;
+	transition: transform .4s ease, opacity .4s ease;
+}
+
+.footer__nav a .en {
+	transform: translateY(0);
+}
+
+.footer__nav a .ja {
+	position: absolute;
+	top: 0;
+	transform: translateY(100%);
+	opacity: 0;
+}
+
+.footer__nav a:hover .en {
+	transform: translateY(-100%);
+	opacity: 0;
+}
+
+.footer__nav a:hover .ja {
+	transform: translateY(0);
+	opacity: 1;
+}
+
 .footer__copyright {
 	text-align: center;
 	font-family: v.$font-italiana;
