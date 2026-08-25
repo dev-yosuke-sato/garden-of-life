@@ -1200,6 +1200,23 @@ ul {
 /* ========================================
    Seminar（終活セミナー）
 ======================================== */
+.seminar-page .reason {
+  background: linear-gradient(180deg, #F0D6DC 0%, #E3C7CF 100%);
+}
+
+.seminar-page .work {
+  background: linear-gradient(180deg, #E3C7CF 0%, #CBBFC6 100%);
+}
+
+.seminar-page .about {
+  background: linear-gradient(180deg, #B2CED8 0%, #D7D8E2 100%);
+  background-image: repeating-linear-gradient(45deg, rgba(115, 200, 227, 0.14) 0, rgba(115, 200, 227, 0.14) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(-45deg, rgba(115, 200, 227, 0.14) 0, rgba(115, 200, 227, 0.14) 1px, transparent 1px, transparent 60px), linear-gradient(180deg, #B2CED8 0%, #D7D8E2 100%);
+}
+
+.seminar-page .contact {
+  background: linear-gradient(180deg, #C9CFDB 0%, #E3DBE5 100%);
+}
+
 .seminar-page .work-card__text,
 .seminar-page .reason__text,
 .seminar-page .about__bio,
@@ -1262,7 +1279,7 @@ ul {
 
 /* DATA */
 .data {
-  background: linear-gradient(180deg, #F2CACA 0%, #E3C7CF 100%);
+  background: linear-gradient(180deg, #F2CACA 0%, #F0D6DC 100%);
   padding: 80px 20px;
 }
 
@@ -1348,7 +1365,7 @@ ul {
 
 /* TESTIMONIAL */
 .testimonial {
-  background-color: #F9F6F3;
+  background: linear-gradient(180deg, #CBBFC6 0%, #B2CED8 100%);
   padding: 100px 20px;
 }
 
@@ -1387,7 +1404,7 @@ ul {
 
 /* FAQ */
 .faq {
-  background-color: #F9F6F3;
+  background: linear-gradient(180deg, #9FCAD4 0%, #C9CFDB 100%);
   padding: 100px 20px 100px;
 }
 
@@ -1451,7 +1468,7 @@ ul {
 
 /* 常時表示の但し書き */
 .disclaimer {
-  background-color: #E7DCE6;
+  background-color: #C9CFDB;
   padding: 32px 20px;
   text-align: center;
 }
@@ -1467,7 +1484,7 @@ ul {
 
 /* PLAN */
 .plan {
-  background: linear-gradient(180deg, #B2CED8 0%, #9FCAD4 100%);
+  background: linear-gradient(180deg, #C9CFDB 0%, #9FCAD4 100%);
   padding: 100px 20px 60px;
   text-align: center;
 }
@@ -1539,7 +1556,7 @@ ul {
 
 /* FLOW（お申し込みの流れ） */
 .seminar-flow-wrap {
-  background: linear-gradient(180deg, #CBBFC6 0%, #B2CED8 100%);
+  background: linear-gradient(180deg, #D7D8E2 0%, #C9CFDB 100%);
   padding: 90px 20px;
 }
 
