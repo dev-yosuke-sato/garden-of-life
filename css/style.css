@@ -1373,17 +1373,7 @@ ul {
   box-shadow: 0 10px 24px rgba(36, 67, 145, 0.06);
 }
 
-.testimonial__mark {
-  font-family: "Prata", serif;
-  font-style: italic;
-  font-size: 40px;
-  color: #244391;
-  opacity: 0.3;
-  line-height: 1;
-}
-
 .testimonial__text {
-  margin-top: 8px;
   line-height: 1.9;
   color: #313536;
 }
@@ -1398,7 +1388,7 @@ ul {
 /* FAQ */
 .faq {
   background-color: #F9F6F3;
-  padding: 20px 20px 100px;
+  padding: 100px 20px 100px;
 }
 
 .faq__inner {
@@ -1554,12 +1544,23 @@ ul {
 }
 
 .seminar-flow-wrap .flow {
-  max-width: 760px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .seminar-flow-wrap .flow__label {
+  font-size: 18px;
   color: #244391;
+}
+
+.seminar-flow-wrap .flow__step {
+  padding: 20px 10px;
+  font-size: 16px;
+}
+
+.seminar-flow-wrap .flow__step-num {
+  font-size: 26px;
+  margin-bottom: 8px;
 }
 
 @media (max-width: 640px) {
