@@ -64,13 +64,24 @@
 	opacity: 1;
 }
 
+.footer__legal {
+	text-align: center;
+	margin-top: 24px;
+	font-size: 12px;
+	letter-spacing: 0.05em;
+	color: v.$color-navy;
+}
+
+.footer__legal a { opacity: .75; transition: opacity .2s; }
+.footer__legal a:hover { opacity: 1; text-decoration: underline; }
+
 .footer__copyright {
 	text-align: center;
 	font-family: v.$font-italiana;
 	font-weight: 400;
 	font-size: 12px;
 	letter-spacing: 0.05em;
-	margin-top: 30px;
+	margin-top: 12px;
 	color: v.$color-navy;
 }
 

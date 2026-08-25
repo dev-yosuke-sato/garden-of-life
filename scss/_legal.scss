@@ -1,0 +1,66 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+
+/* ========================================
+   Legal（プライバシーポリシー等）
+======================================== */
+.legal {
+	background: linear-gradient(180deg, #E3DBE5 0%, v.$color-cream 100%);
+	padding: 70px 20px 120px;
+}
+
+.legal__inner { max-width: 760px; margin: 0 auto; }
+
+.legal__lead {
+	font-size: 15px;
+	line-height: 2;
+	color: v.$color-block;
+	margin-bottom: 50px;
+}
+
+.legal__section + .legal__section { margin-top: 44px; }
+
+.legal__heading {
+	font-family: v.$font-serif;
+	font-size: 22px;
+	color: v.$color-navy;
+	margin-bottom: 14px;
+}
+
+.legal__text {
+	font-size: 15px;
+	line-height: 2;
+	color: v.$color-block;
+}
+
+.legal__text + .legal__text { margin-top: 10px; }
+
+.legal__list {
+	margin-top: 10px;
+	padding-left: 1.4em;
+}
+
+.legal__list li {
+	font-size: 15px;
+	line-height: 2;
+	color: v.$color-block;
+	margin-bottom: 4px;
+}
+
+.legal__contact {
+	margin-top: 60px;
+	padding-top: 30px;
+	border-top: 1px solid rgba(v.$color-navy, .15);
+	font-size: 15px;
+	line-height: 2;
+	color: v.$color-block;
+}
+
+.legal__date {
+	margin-top: 40px;
+	font-size: 13px;
+	color: v.$color-block;
+	opacity: .7;
+	text-align: right;
+}

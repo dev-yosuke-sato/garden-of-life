@@ -913,13 +913,31 @@ ul {
   opacity: 1;
 }
 
+.footer__legal {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: #244391;
+}
+
+.footer__legal a {
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.footer__legal a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 .footer__copyright {
   text-align: center;
   font-family: "Italiana", serif;
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 0.05em;
-  margin-top: 30px;
+  margin-top: 12px;
   color: #244391;
 }
 
@@ -1595,6 +1613,76 @@ ul {
     max-width: 320px;
   }
 }
+/* ========================================
+   Legal（プライバシーポリシー等）
+======================================== */
+.legal {
+  background: linear-gradient(180deg, #E3DBE5 0%, #F7EEF3 100%);
+  padding: 70px 20px 120px;
+}
+
+.legal__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal__lead {
+  font-size: 15px;
+  line-height: 2;
+  color: #313536;
+  margin-bottom: 50px;
+}
+
+.legal__section + .legal__section {
+  margin-top: 44px;
+}
+
+.legal__heading {
+  font-family: "Prata", serif;
+  font-size: 22px;
+  color: #244391;
+  margin-bottom: 14px;
+}
+
+.legal__text {
+  font-size: 15px;
+  line-height: 2;
+  color: #313536;
+}
+
+.legal__text + .legal__text {
+  margin-top: 10px;
+}
+
+.legal__list {
+  margin-top: 10px;
+  padding-left: 1.4em;
+}
+
+.legal__list li {
+  font-size: 15px;
+  line-height: 2;
+  color: #313536;
+  margin-bottom: 4px;
+}
+
+.legal__contact {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(36, 67, 145, 0.15);
+  font-size: 15px;
+  line-height: 2;
+  color: #313536;
+}
+
+.legal__date {
+  margin-top: 40px;
+  font-size: 13px;
+  color: #313536;
+  opacity: 0.7;
+  text-align: right;
+}
+
 /* ========================================
    Coming Soon（準備中）
 ======================================== */
