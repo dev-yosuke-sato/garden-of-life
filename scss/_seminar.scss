@@ -336,12 +336,17 @@
 	padding: 90px 20px;
 }
 
-.seminar-flow-wrap .flow { max-width: 800px; margin: 0 auto; }
+.seminar-flow-wrap .flow { max-width: 960px; margin: 0 auto; }
 .seminar-flow-wrap .flow__label { font-size: 18px; color: v.$color-navy; }
 
+.seminar-flow-wrap .flow__list {
+	grid-template-columns: repeat(5, 1fr);
+}
+
 .seminar-flow-wrap .flow__step {
-	padding: 20px 10px;
+	padding: 20px 8px;
 	font-size: 16px;
+	white-space: nowrap;
 }
 
 .seminar-flow-wrap .flow__step-num {
@@ -349,9 +354,15 @@
 	margin-bottom: 8px;
 }
 
+@media (max-width: v.$bp-md) {
+	.seminar-flow-wrap .flow__list { grid-template-columns: repeat(3, 1fr); }
+	.seminar-flow-wrap .flow__step { white-space: normal; }
+}
+
 @media (max-width: v.$bp-sm) {
 	.seminar-lead__catch { font-size: 24px; }
 	.plan-card { padding: 36px 24px; }
 	.testimonial__card { width: 100%; }
 	.data__item { width: 100%; max-width: 320px; }
+	.seminar-flow-wrap .flow__list { grid-template-columns: 1fr; }
 }

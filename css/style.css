@@ -1579,7 +1579,7 @@ ul {
 }
 
 .seminar-flow-wrap .flow {
-  max-width: 800px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -1588,9 +1588,14 @@ ul {
   color: #244391;
 }
 
+.seminar-flow-wrap .flow__list {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .seminar-flow-wrap .flow__step {
-  padding: 20px 10px;
+  padding: 20px 8px;
   font-size: 16px;
+  white-space: nowrap;
 }
 
 .seminar-flow-wrap .flow__step-num {
@@ -1598,6 +1603,14 @@ ul {
   margin-bottom: 8px;
 }
 
+@media (max-width: 1024px) {
+  .seminar-flow-wrap .flow__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .seminar-flow-wrap .flow__step {
+    white-space: normal;
+  }
+}
 @media (max-width: 640px) {
   .seminar-lead__catch {
     font-size: 24px;
@@ -1611,6 +1624,9 @@ ul {
   .data__item {
     width: 100%;
     max-width: 320px;
+  }
+  .seminar-flow-wrap .flow__list {
+    grid-template-columns: 1fr;
   }
 }
 /* ========================================
