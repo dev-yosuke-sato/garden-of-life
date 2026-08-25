@@ -178,12 +178,24 @@ ul {
   font-family: "Prata", serif;
   font-size: 20px;
   letter-spacing: 0.05em;
+  color: #244391;
   white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .header__tel img {
   width: 24px;
   height: 24px;
+  transition: filter 0.2s;
+}
+
+.header__tel:hover {
+  background-color: #244391;
+  color: #F7EEF3;
+}
+
+.header__tel:hover img {
+  filter: brightness(0) invert(1);
 }
 
 .header__hamburger {

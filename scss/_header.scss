@@ -93,12 +93,24 @@
   font-family: v.$font-serif;
   font-size: 20px;
   letter-spacing: 0.05em;
+  color: v.$color-navy;
   white-space: nowrap;
+  transition: background-color .2s, color .2s;
 }
 
 .header__tel img {
   width: 24px;
   height: 24px;
+  transition: filter .2s;
+}
+
+.header__tel:hover {
+  background-color: v.$color-navy;
+  color: v.$color-cream;
+}
+
+.header__tel:hover img {
+  filter: brightness(0) invert(1);
 }
 
 .header__hamburger {
