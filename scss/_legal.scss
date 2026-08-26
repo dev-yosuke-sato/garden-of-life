@@ -15,7 +15,7 @@
 .legal__lead {
 	font-size: 15px;
 	line-height: 2;
-	color: v.$color-block;
+	color: v.$color-navy;
 	margin-bottom: 50px;
 }
 
@@ -31,7 +31,7 @@
 .legal__text {
 	font-size: 15px;
 	line-height: 2;
-	color: v.$color-block;
+	color: v.$color-navy;
 }
 
 .legal__text + .legal__text { margin-top: 10px; }
@@ -44,7 +44,7 @@
 .legal__list li {
 	font-size: 15px;
 	line-height: 2;
-	color: v.$color-block;
+	color: v.$color-navy;
 	margin-bottom: 4px;
 }
 
@@ -54,13 +54,13 @@
 	border-top: 1px solid rgba(v.$color-navy, .15);
 	font-size: 15px;
 	line-height: 2;
-	color: v.$color-block;
+	color: v.$color-navy;
 }
 
 .legal__date {
 	margin-top: 40px;
 	font-size: 13px;
-	color: v.$color-block;
+	color: v.$color-navy;
 	opacity: .7;
 	text-align: right;
 }

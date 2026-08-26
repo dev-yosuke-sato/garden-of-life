@@ -1659,7 +1659,7 @@ ul {
 .legal__lead {
   font-size: 15px;
   line-height: 2;
-  color: #313536;
+  color: #244391;
   margin-bottom: 50px;
 }
 
@@ -1677,7 +1677,7 @@ ul {
 .legal__text {
   font-size: 15px;
   line-height: 2;
-  color: #313536;
+  color: #244391;
 }
 
 .legal__text + .legal__text {
@@ -1692,7 +1692,7 @@ ul {
 .legal__list li {
   font-size: 15px;
   line-height: 2;
-  color: #313536;
+  color: #244391;
   margin-bottom: 4px;
 }
 
@@ -1702,13 +1702,13 @@ ul {
   border-top: 1px solid rgba(36, 67, 145, 0.15);
   font-size: 15px;
   line-height: 2;
-  color: #313536;
+  color: #244391;
 }
 
 .legal__date {
   margin-top: 40px;
   font-size: 13px;
-  color: #313536;
+  color: #244391;
   opacity: 0.7;
   text-align: right;
 }
