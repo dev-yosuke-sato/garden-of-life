@@ -1448,12 +1448,21 @@ ul {
 }
 
 .faq__q {
+  width: 100%;
   display: flex;
   gap: 16px;
-  align-items: flex-start;
+  align-items: center;
   font-family: "Prata", serif;
   font-size: 19px;
   color: #244391;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .faq__q-mark, .faq__a-mark {
@@ -1478,8 +1487,59 @@ ul {
   color: #F7EEF3;
 }
 
-.faq__a {
+.faq__q-text {
+  flex: 1;
+}
+
+.faq__q-icon {
+  flex-shrink: 0;
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.faq__q-icon::before, .faq__q-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #244391;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.faq__q-icon::before {
+  width: 16px;
+  height: 2px;
+}
+
+.faq__q-icon::after {
+  width: 2px;
+  height: 16px;
+}
+
+.faq__item.is-open .faq__q-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+
+.faq__a-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  margin-top: 0;
+  transition: grid-template-rows 0.35s ease, margin-top 0.35s ease;
+}
+
+.faq__a-wrap > .faq__a {
+  overflow: hidden;
+}
+
+.faq__item.is-open .faq__a-wrap {
+  grid-template-rows: 1fr;
   margin-top: 14px;
+}
+
+.faq__a {
   display: flex;
   gap: 16px;
   align-items: flex-start;

@@ -155,6 +155,31 @@ document.addEventListener('click', (event) => {
 });
 
 // ==========================================================================
+// FAQアコーディオン（1つだけ開く仕様）
+// ==========================================================================
+const faqItems = document.querySelectorAll('.faq__item');
+
+faqItems.forEach((item) => {
+	const question = item.querySelector('.faq__q');
+	if (!question) return;
+
+	question.addEventListener('click', () => {
+		const isOpen = item.classList.contains('is-open');
+
+		faqItems.forEach((other) => {
+			other.classList.remove('is-open');
+			const otherQuestion = other.querySelector('.faq__q');
+			if (otherQuestion) otherQuestion.setAttribute('aria-expanded', 'false');
+		});
+
+		if (!isOpen) {
+			item.classList.add('is-open');
+			question.setAttribute('aria-expanded', 'true');
+		}
+	});
+});
+
+// ==========================================================================
 // スクロールフェードイン（reveal）
 // ==========================================================================
 const revealItems = document.querySelectorAll('.reveal');
