@@ -26,6 +26,22 @@ if (hamburger && spNav) {
 	});
 }
 
+// CONTACTセクションが表示されたらヘッダーを隠し、問い合わせ導線が二重に見えないようにする
+const contactSection = document.querySelector('.contact');
+
+if (contactSection && header) {
+	const contactObserver = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (header.classList.contains('is-open')) return;
+				header.classList.toggle('is-hidden', entry.isIntersecting);
+			});
+		},
+		{ threshold: 0.15 }
+	);
+	contactObserver.observe(contactSection);
+}
+
 // Marquee: keep the loop seamless at any viewport width
 const marqueeTracks = document.querySelectorAll('[data-marquee]');
 

@@ -102,7 +102,12 @@ ul {
   border-radius: 999px;
   background: linear-gradient(88deg, rgb(236, 226, 235) 2%, rgb(196, 211, 221) 51%, rgb(242, 202, 202) 99%);
   box-shadow: 0 10px 30px rgba(36, 67, 145, 0.12);
-  transition: border-radius 0.3s ease;
+  transition: border-radius 0.3s ease, opacity 0.3s ease;
+}
+
+.header.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .header__inner {
@@ -818,19 +823,27 @@ ul {
   margin-top: 20px;
 }
 
+.contact__cta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 640px;
+  margin: 40px auto 0;
+  gap: 20px;
+}
+
 .contact__btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  margin-top: 40px;
-  padding: 18px 48px;
+  padding: 18px 24px;
   border: 1px solid #F7EEF3;
   border-radius: 80px;
   font-family: "Prata", serif;
   font-size: 16px;
   letter-spacing: 0.1em;
   color: #F7EEF3;
-  transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
 .contact__btn img {
@@ -848,6 +861,28 @@ ul {
   filter: none;
 }
 
+.contact__btn--line {
+  border-color: #06C755;
+  background-color: #06C755;
+  color: #F7EEF3;
+}
+
+.contact__btn--line img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.contact__btn--line:hover {
+  background-color: #F7EEF3;
+  border-color: #06C755;
+  color: #06C755;
+}
+
+.contact__btn--line:hover img {
+  filter: none;
+}
+
 /* ========================================
    Footer
 ======================================== */
@@ -859,11 +894,14 @@ ul {
 .footer__inner {
   max-width: 1360px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 20px;
+}
+
+.footer__logo {
+  justify-self: start;
 }
 
 .footer__logo img {
@@ -872,6 +910,7 @@ ul {
 }
 
 .footer__nav {
+  justify-self: center;
   display: flex;
   gap: 40px;
   font-family: "Italiana", serif;
@@ -913,6 +952,29 @@ ul {
   opacity: 1;
 }
 
+.footer__sns {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__sns a {
+  display: inline-flex;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.footer__sns a:hover {
+  opacity: 1;
+}
+
+.footer__sns img {
+  display: block;
+  height: 20px;
+  width: auto;
+}
+
 .footer__legal {
   text-align: center;
   margin-top: 24px;
@@ -943,8 +1005,12 @@ ul {
 
 @media (max-width: 640px) {
   .footer__inner {
+    display: flex;
     flex-direction: column;
     text-align: center;
+  }
+  .footer__logo, .footer__sns {
+    justify-self: unset;
   }
   .footer__nav {
     gap: 24px;

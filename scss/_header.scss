@@ -15,7 +15,14 @@
   border-radius: 999px;
   background: v.$gradient-header;
   box-shadow: 0 10px 30px rgba(v.$color-navy, 0.12);
-  transition: border-radius 0.3s ease;
+  transition:
+    border-radius 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.header.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .header__inner {
