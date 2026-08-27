@@ -1343,14 +1343,14 @@ ul {
 }
 
 .seminar-lead__cta {
-  margin-top: 36px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  margin: 36px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  max-width: 640px;
+  gap: 20px;
 }
 
-.seminar-lead__cta .contact__btn {
+.seminar-lead__cta .contact__btn:not(.contact__btn--line) {
   border-color: #244391;
   color: #244391;
 }
