@@ -837,12 +837,12 @@ ul {
   justify-content: center;
   gap: 12px;
   padding: 18px 24px;
-  border: 1px solid #F7EEF3;
+  border: 1px solid #244391;
   border-radius: 80px;
   font-family: "Prata", serif;
   font-size: 16px;
   letter-spacing: 0.1em;
-  color: #F7EEF3;
+  color: #244391;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
 
@@ -1348,11 +1348,6 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   max-width: 640px;
   gap: 20px;
-}
-
-.seminar-lead__cta .contact__btn:not(.contact__btn--line) {
-  border-color: #244391;
-  color: #244391;
 }
 
 .seminar-lead__note {
