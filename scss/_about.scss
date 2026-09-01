@@ -6,95 +6,114 @@
    About
 ======================================== */
 .about {
-	position: relative;
-	overflow: hidden;
-	background: v.$gradient-about;
-	background-image:
-		repeating-linear-gradient(45deg, rgba(115,200,227,0.14) 0, rgba(115,200,227,0.14) 1px, transparent 1px, transparent 60px),
-		repeating-linear-gradient(-45deg, rgba(115,200,227,0.14) 0, rgba(115,200,227,0.14) 1px, transparent 1px, transparent 60px),
-		v.$gradient-about;
-	padding: 100px 20px 120px;
-}
+  position: relative;
+  overflow: hidden;
+  background: v.$gradient-about;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(115, 200, 227, 0.14) 0,
+      rgba(115, 200, 227, 0.14) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(115, 200, 227, 0.14) 0,
+      rgba(115, 200, 227, 0.14) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    v.$gradient-about;
+  padding: 100px 20px 120px;
 
-.about__inner {
-	position: relative;
-	z-index: 1;
-	max-width: 1100px;
-	margin: 0 auto;
-}
+  &__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
 
-.about__content {
-	display: flex;
-	align-items: flex-start;
-	gap: 90px;
-	flex-wrap: wrap;
-	margin-top: 48px;
-}
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    gap: 90px;
+    flex-wrap: wrap;
+    margin-top: 48px;
 
-.about__portrait-wrap {
-	position: relative;
-	flex-shrink: 0;
-	width: 278px;
-}
+    @media (max-width: v.$bp-md) {
+      justify-content: center;
+    }
 
-.about__portrait {
-	position: relative;
-	width: 278px;
-	height: 390px;
-	border-radius: 50%;
-	overflow: hidden;
-	border: 1.5px solid v.$color-tan;
-}
+    @media (max-width: v.$bp-sm) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 
-.about__portrait img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
+  &__portrait-wrap {
+    position: relative;
+    flex-shrink: 0;
+    width: 278px;
+  }
 
-// 土星の輪のように、写真の背後を通って斜めに大きくかかるリング
-.about__portrait-ring {
-	position: absolute;
-	top: -53px;
-	left: 32px;
-	width: 214px;
-	max-width: none;
-	height: 496px;
-	transform: rotate(36.2deg);
-	transform-origin: center center;
-	pointer-events: none;
-	z-index: 1;
-}
+  &__portrait {
+    position: relative;
+    width: 278px;
+    height: 390px;
+    border-radius: 167px;
+    overflow: hidden;
+    border: 1px solid v.$color-tan;
 
-.about__table {
-	flex: 1;
-	min-width: 280px;
-	display: flex;
-	flex-direction: column;
-}
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 
-.about__row {
-	display: flex;
-	gap: 20px;
-	padding: 18px 0;
-	border-top: 1px solid rgba(v.$color-navy, 0.25);
-	font-size: 16px;
-	letter-spacing: 0.05em;
-}
+  // 土星の輪のように、写真の背後を通って斜めに大きくかかるリング
+  &__portrait-ring {
+    position: absolute;
+    top: -53px;
+    left: 32px;
+    width: 214px;
+    max-width: none;
+    height: 496px;
+    transform: rotate(36.2deg);
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 1;
+  }
 
-.about__row:last-child { border-bottom: 1px solid rgba(v.$color-navy, 0.25); }
+  &__table {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
 
-.about__row dt {
-	width: 100px;
-	flex-shrink: 0;
-	font-weight: 500;
-}
+    @media (max-width: v.$bp-md) {
+      min-width: 100%;
+    }
+  }
 
-@media (max-width: v.$bp-md) {
-	.about__content { justify-content: center; }
-	.about__table { min-width: 100%; }
-}
+  &__row {
+    display: flex;
+    gap: 20px;
+    padding: 18px 0;
+    border-top: 1px solid rgba(v.$color-navy, 0.25);
+    font-family: 'Yu Gothic', 'YuGothic', v.$font-sans;
+    font-size: 16px;
+    letter-spacing: 0.05em;
 
-@media (max-width: v.$bp-sm) {
-	.about__content { flex-direction: column; align-items: center; }
+    &:last-child {
+      border-bottom: 1px solid rgba(v.$color-navy, 0.25);
+    }
+
+    dt {
+      width: 100px;
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+  }
 }

@@ -2,106 +2,152 @@
 
 @use 'variables' as v;
 
+// PC時のカード幅(250px)を全breakpointで維持するため、
+// 列数が破綻せずに収まる幅だけで列数を切り替える。
+// 4列: 250px×4 + gap30px×3 + padding40px = 1130px
+// 2列: 250px×2 + gap30px×1 + padding40px = 570px
+$service-bp-2col: 1140px;
+$service-bp-1col: 600px;
+
 /* ========================================
    Service（Topページ内プレビュー）
 ======================================== */
 .service {
-	position: relative;
-	overflow: hidden;
-	background: v.$gradient-service;
-	background-image:
-		repeating-linear-gradient(45deg, rgba(v.$color-pink, 0.16) 0, rgba(v.$color-pink, 0.16) 1px, transparent 1px, transparent 60px),
-		repeating-linear-gradient(-45deg, rgba(v.$color-pink, 0.16) 0, rgba(v.$color-pink, 0.16) 1px, transparent 1px, transparent 60px),
-		v.$gradient-service;
-	padding: 100px 20px 60px;
-}
+  position: relative;
+  overflow: hidden;
+  background: v.$gradient-service;
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(v.$color-pink, 0.16) 0,
+      rgba(v.$color-pink, 0.16) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(v.$color-pink, 0.16) 0,
+      rgba(v.$color-pink, 0.16) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    v.$gradient-service;
+  padding: 100px 20px 60px;
 
-.service__butterflies {
-	position: absolute;
-	top: 0;
-	right: -180px;
-	width: 380px;
-	max-width: 40%;
-	transform: scaleX(-1);
-	pointer-events: none;
-	z-index: 0;
-}
+  &__butterfly {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
 
-.service__inner {
-	position: relative;
-	z-index: 1;
-	max-width: 1200px;
-	margin: 0 auto;
-}
+    &--1 {
+      top: 21.8%;
+      left: 25.3%;
+      width: 103px;
+      height: auto;
+    }
 
-.service__list {
-	display: flex;
-	justify-content: center;
-	gap: 60px;
-	margin-top: 60px;
-	flex-wrap: wrap;
-}
+    &--2 {
+      top: 80.1%;
+      left: 68.9%;
+      width: 73.39px;
+      height: auto;
+      transform: rotate(22.53deg);
+    }
+  }
 
-.service__item {
-	width: 360px;
-	height: 360px;
-	border-radius: 50%;
-	background-color: #fff;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: flex-start;
-	text-align: center;
-	padding: 36px 40px 30px;
-	box-shadow: 0 14px 40px rgba(v.$color-navy, 0.08);
-}
+  &__inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
 
-.service__num {
-	font-family: v.$font-serif;
-	font-size: 48px;
-	line-height: 1.15;
-	color: v.$color-navy;
-}
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    justify-content: center;
+    gap: 30px;
+    margin-top: 80px;
 
-.service__name {
-	font-family: v.$font-serif;
-	font-size: 33px;
-	line-height: 1.15;
-	color: v.$color-rose;
-	letter-spacing: 0.05em;
-	margin: 8px 0 10px;
-}
+    @media (max-width: $service-bp-2col) {
+      grid-template-columns: repeat(2, 250px);
+    }
 
-// 3行分の高さで固定し、説明文の行数が違っても矢印の位置を揃える
-.service__desc {
-	width: 100%;
-	height: 96px;
-	overflow: hidden;
-	font-size: 20px;
-	line-height: 1.5;
-}
+    @media (max-width: $service-bp-1col) {
+      grid-template-columns: 250px;
+    }
+  }
 
-.service__arrow {
-	margin-top: 10px;
-	font-size: 26px;
-	line-height: 1;
-	transition: transform .2s;
-}
-.service__arrow:hover { transform: translateX(4px); }
+  &__item {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    border-radius: 120px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 50px 26px 40px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  }
 
-@media (max-width: v.$bp-md) {
-	.service__item { width: 300px; height: 300px; padding: 30px 34px 26px; }
-	.service__num { font-size: 40px; }
-	.service__name { font-size: 28px; margin: 6px 0 8px; }
-	.service__desc { font-size: 17px; height: 83px; }
-	.service__arrow { margin-top: 8px; }
-}
+  &__num {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: v.$font-marcellus;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0.05em;
+    color: v.$color-navy;
+    z-index: 2;
+  }
 
-@media (max-width: v.$bp-sm) {
-	.service__list { gap: 30px; }
-	.service__item { width: 240px; height: 240px; padding: 26px 26px 20px; }
-	.service__num { font-size: 32px; }
-	.service__name { font-size: 22px; margin: 6px 0 6px; }
-	.service__desc { font-size: 14px; height: 69px; }
-	.service__arrow { margin-top: 6px; }
+  &__name {
+    font-family: v.$font-marcellus;
+    font-size: 24px;
+    line-height: 1;
+    color: #de649c;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+
+  &__name-sub {
+    font-family: 'Yu Gothic', 'YuGothic', v.$font-sans;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+    margin-bottom: 16px;
+  }
+
+  // 4行分の高さで固定し、説明文の行数が違っても矢印の位置を揃える
+  &__desc {
+    width: 100%;
+    max-width: 181px;
+    height: 110px;
+    overflow: hidden;
+    font-family: 'Yu Gothic', 'YuGothic', v.$font-sans;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    color: v.$color-navy;
+    text-align: justify;
+  }
+
+  &__arrow {
+    margin-top: 8px;
+    font-size: 22px;
+    line-height: 1;
+    color: v.$color-navy;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateX(4px);
+    }
+  }
 }

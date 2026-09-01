@@ -19,7 +19,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Prata&family=Italiana&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Prata&family=Marcellus&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
@@ -45,10 +45,16 @@
 							<span class="ja">セミナー</span>
 						</a></li>
 				</ul>
-				<a href="tel:07095104514" class="header__tel">
-					<img src="./images/icon-phone.svg" alt="">
-					<span>070-9510-4514</span>
-				</a>
+				<div class="header__actions">
+					<a href="tel:07095104514" class="header__tel">
+						<img src="./images/icon-phone.svg" alt="">
+						<span>070-9510-4514</span>
+					</a>
+					<a href="https://lin.ee/QFpINyl" class="header__cta" target="_blank" rel="noopener">
+						<img src="./images/icon-line-navy.svg" alt="">
+						<span>CONTACT</span>
+					</a>
+				</div>
 			</nav>
 			<button class="header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
 				<span></span><span></span><span></span>
@@ -66,17 +72,14 @@
 	<main>
 		<!-- PAGE HERO -->
 		<section class="page-hero">
-			<img src="./images/butterflies-hero.svg" alt="" class="page-hero__butterflies">
+			<img src="./images/Layer_1.svg" alt="" class="page-hero__butterflies">
 			<h1 class="page-hero__label reveal">SEMINAR</h1>
-			<div class="page-hero__inner">
-				<p class="page-hero__ja reveal">終活は「死の準備」ではありません。自分らしく生きるための準備です。</p>
-				<p class="page-hero__en reveal">A Gentle Hour for Your Story</p>
-			</div>
 		</section>
 		<!-- LEAD / キャッチコピー -->
 		<section class="seminar-lead">
 			<div class="seminar-lead__inner">
-				<p class="seminar-lead__catch reveal">「まだいいかな」が、いちばん遠回り。</p>
+				<p class="seminar-lead__en reveal">A Gentle Hour for Your Story</p>
+				<p class="seminar-lead__catch reveal">終活は「死の準備」ではありません。<br>自分らしく生きるための準備です。</p>
 				<p class="seminar-lead__catch-sub reveal">大切な人に負担をかけないための、やさしい終活のはじめかた。</p>
 				<p class="seminar-lead__text reveal"> 人生のしまい方を、家族と話せていますか。<br>
 					エンディングノートから相続・医療のことまで、終活アドバイザーがやさしく解説します。<br><br> 法律や税金のお話は断定せず、必要に応じて専門家への相談をご案内します。<br>
@@ -86,8 +89,9 @@
 						<img src="./images/icon-phone.svg" alt="">
 						<span>お申し込みはこちら</span>
 					</a>
-					<a href="https://lin.ee/QFpINyl" class="contact__btn contact__btn--line reveal" target="_blank" rel="noopener">
-						<img src="./images/icon-line.svg" alt="">
+					<a href="https://lin.ee/QFpINyl" class="contact__btn contact__btn--line reveal" target="_blank"
+						rel="noopener">
+						<img src="./images/bubble.svg" alt="">
 						<span>公式LINE</span>
 					</a>
 					<!-- <p class="seminar-lead__note">お電話でのお申し込みも承ります　070-9510-4514</p> -->
@@ -101,15 +105,17 @@
 						class="section-heading__sub">終活、実は多くの方がこう感じています</span></h2>
 				<div class="data__list">
 					<div class="data__item reveal">
-						<p class="data__num">約2<span>割</span></p>
-						<p class="data__text">50代以上で、すでに終活を始めている方の割合</p>
+						<p class="data__num"><span class="data__num-prefix">約</span>2<span
+								class="data__num-suffix">割</span></p>
+						<p class="data__text">50代以上で、<br>すでに終活を始めている方の割合</p>
 					</div>
 					<div class="data__item reveal">
-						<p class="data__num">約8<span>割</span></p>
+						<p class="data__num"><span class="data__num-prefix">約</span>8<span
+								class="data__num-suffix">割</span></p>
 						<p class="data__text">終活を始めていない方のうち、不安を感じている方の割合</p>
 					</div>
 					<div class="data__item reveal">
-						<p class="data__num">60<span>代</span></p>
+						<p class="data__num">60<span class="data__num-suffix">代</span></p>
 						<p class="data__text">「終活を始めるのにふさわしい年代」として最も多い回答</p>
 					</div>
 				</div>
@@ -130,7 +136,7 @@
 					</div>
 					<div class="reason__item reveal">
 						<span class="reason__index">(02)</span>
-						<h3 class="reason__title">自分の希望を伝えられないまま終わりたくない</h3>
+						<h3 class="reason__title">自分の希望を伝えられないまま終わらせたくない</h3>
 						<p class="reason__text">エンディングノートで、想いを言葉にして残しておきませんか。</p>
 					</div>
 					<p class="reason__group-label reveal">ご家族へ（40〜50代）</p>
@@ -141,7 +147,7 @@
 					</div>
 					<div class="reason__item reveal">
 						<span class="reason__index">(04)</span>
-						<h3 class="reason__title">通帳も家もお墓も、全部背負うことになりそう</h3>
+						<h3 class="reason__title">介護や相続について今のうちに整理しておきたい</h3>
 						<p class="reason__text">ご自身の老後の備えとして、親子で一緒にご参加いただく方も増えています。</p>
 					</div>
 				</div>
@@ -151,7 +157,7 @@
 		<section class="work" id="curriculum">
 			<div class="work__inner">
 				<div class="work__head reveal">
-					<p class="work__label">Curriculum</p>
+					<p class="work__label">CURRICULUM</p>
 					<h2 class="work__title">セミナーの内容</h2>
 				</div>
 				<div class="work__list">
@@ -217,14 +223,17 @@
 						class="section-heading__sub">参加者の声</span></h2>
 				<div class="testimonial__list">
 					<div class="testimonial__card reveal">
-						<p class="testimonial__text">夫に任せっきりだった財産のこと、セミナーを機に2人で話せました。何があっても夫婦で決めた道なら後悔しないと思えます。</p>
+						<p class="testimonial__headline">夫婦で、これからを話すきっかけに。</p>
+						<p class="testimonial__text">夫に任せっきりだった財産のこ と、セミナーを機に2人で話せま した。何があっても夫婦で決めた道なら後悔しないと思えます。</p>
 						<p class="testimonial__who">70代・女性</p>
 					</div>
 					<div class="testimonial__card reveal">
-						<p class="testimonial__text">親にすすめ方がわからず悩んでいました。「一緒に行かない？」と誘える内容で助かりました。相談をして安心しました。</p>
+						<p class="testimonial__headline">親と一緒に考える、きっかけになりました。</p>
+						<p class="testimonial__text">夫親にすすめ方がわからず悩んでいました。「一緒に行かない？」と誘える内容で助かりました。相談をして安心しました。</p>
 						<p class="testimonial__who">40代・女性（子世代）</p>
 					</div>
 					<div class="testimonial__card reveal">
+						<p class="testimonial__headline">知ることで、不安が安心に変わりました。</p>
 						<p class="testimonial__text">相続登記の義務化はニュースで見ていたけど、自分に関係あると思えませんでした。実際の手続きの流れが聞けて安心。</p>
 						<p class="testimonial__who">60代・男性</p>
 					</div>
@@ -248,23 +257,55 @@
 						<span class="about__bio-cred">終活アドバイザー</span>
 						<p style="margin-top:20px;"> Garden of
 							Life代表。「人生という庭に、光を届けたい」という想いから、Web制作やSNS運用を通じたサポートに加え、終活アドバイザーとして終活セミナーを開催しています。
-							おひとりおひとりの人生に丁寧に向き合い、堅苦しくなく、あたたかい時間をお届けします。
-							不安なお気持ちにもそっと寄り添いながら、その方のペースを大切にお話ししています。 </p>
+							おひとりおひとりの人生に丁寧に向き合い、堅苦しくなく、あたたかい時間をお届けします。 不安なお気持ちにもそっと寄り添いながら、その方のペースを大切にお話ししています。</p>
 					</div>
 				</div>
 			</div>
 		</section>
+		<div class="section-divider" aria-hidden="true">
+			<img src="./images/butterfly_white.svg" alt="" class="section-divider__img">
+		</div>
 		<!-- FLOW -->
 		<div class="seminar-flow-wrap">
-			<div class="flow">
-				<span class="flow__label">flow</span>
-				<ul class="flow__list">
-					<li class="flow__step"><span class="flow__step-num">1</span>お申し込み</li>
-					<li class="flow__step"><span class="flow__step-num">2</span>ご連絡・詳細案内</li>
-					<li class="flow__step"><span class="flow__step-num">3</span>セミナー当日</li>
-					<li class="flow__step"><span class="flow__step-num">4</span>ノート・資料お渡し</li>
-					<li class="flow__step"><span class="flow__step-num">5</span>アフターフォロー</li>
-				</ul>
+			<div class="seminar-flow">
+				<h2 class="seminar-flow__label reveal"><img src="./images/butterfly_yellow.svg" alt="" class="seminar-flow__deco">参加までの流れ</h2>
+				<div class="seminar-flow__list">
+					<div class="seminar-flow__step reveal">
+						<div class="seminar-flow__badge">
+							<span class="seminar-flow__badge-label">STEP</span>
+							<span class="seminar-flow__badge-num">01</span>
+						</div>
+						<div class="seminar-flow__card">
+							<img src="./images/seminar-flow/step1.svg" alt="" class="seminar-flow__icon">
+							<p class="seminar-flow__title">お申し込み</p>
+							<p class="seminar-flow__step-text">企業様や自治会の方々</p>
+						</div>
+					</div>
+					<div class="seminar-flow__arrow" aria-hidden="true">▶</div>
+					<div class="seminar-flow__step reveal">
+						<div class="seminar-flow__badge">
+							<span class="seminar-flow__badge-label">STEP</span>
+							<span class="seminar-flow__badge-num">02</span>
+						</div>
+						<div class="seminar-flow__card">
+							<img src="./images/seminar-flow/step2.svg" alt="" class="seminar-flow__icon">
+							<p class="seminar-flow__title">セミナー当日</p>
+							<p class="seminar-flow__step-text">少人数制で、安心して話せる場づくりを大切にしています</p>
+						</div>
+					</div>
+					<div class="seminar-flow__arrow" aria-hidden="true">▶</div>
+					<div class="seminar-flow__step reveal">
+						<div class="seminar-flow__badge">
+							<span class="seminar-flow__badge-label">STEP</span>
+							<span class="seminar-flow__badge-num">03</span>
+						</div>
+						<div class="seminar-flow__card">
+							<img src="./images/seminar-flow/step3.svg" alt="" class="seminar-flow__icon">
+							<p class="seminar-flow__title">アフターフォロー</p>
+							<p class="seminar-flow__step-text">セミナー後の個別相談も可能です（ご希望の方のみ）</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- FAQ -->
@@ -280,7 +321,8 @@
 							<span class="faq__q-icon"></span>
 						</button>
 						<div class="faq__a-wrap">
-							<p class="faq__a"><span class="faq__a-mark">A</span>開催場所によって異なります。まずはお気軽にご相談ください。お見積もりは無料です。</p>
+							<p class="faq__a"><span class="faq__a-mark">A</span>開催場所によって異なります。まずはお気軽にご相談ください。お見積もりは無料です。
+							</p>
 						</div>
 					</div>
 					<div class="faq__item reveal">
@@ -362,17 +404,18 @@
 		</div>
 		<!-- CONTACT -->
 		<section class="contact" id="contact">
-			<img src="./images/butterflies-contact.svg" alt="" class="contact__butterflies">
+			<img src="./images/contact-butterflies.svg" alt="" class="contact__butterflies">
 			<div class="contact__inner">
-				<h2 class="section-heading reveal">CONTACT</h2>
-				<p class="contact__text reveal">まずはお電話でご相談ください</p>
+				<h2 class="contact__heading reveal">CONTACT</h2>
+				<p class="contact__text reveal">まだ具体的に決まっていなくても大丈夫です。<br>まずは、あなたの想いをお聞かせください。</p>
 				<div class="contact__cta">
 					<a href="tel:07095104514" class="contact__btn reveal">
 						<img src="./images/icon-phone.svg" alt="">
 						<span>お申し込みはこちら</span>
 					</a>
-					<a href="https://lin.ee/QFpINyl" class="contact__btn contact__btn--line reveal" target="_blank" rel="noopener">
-						<img src="./images/icon-line.svg" alt="">
+					<a href="https://lin.ee/QFpINyl" class="contact__btn contact__btn--line reveal" target="_blank"
+						rel="noopener">
+						<img src="./images/bubble.svg" alt="">
 						<span>公式LINE</span>
 					</a>
 				</div>
@@ -380,34 +423,41 @@
 		</section>
 	</main>
 	<footer class="footer">
+		<div class="deco-butterflies" aria-hidden="true">
+			<img class="footer__butterflies-img" src="./images/footer-butterflies.svg" alt="">
+		</div>
 		<div class="footer__inner">
 			<a href="index.html" class="footer__logo">
 				<img src="./images/logo-footer.png" alt="Garden of Life">
 			</a>
-			<nav class="footer__nav">
-				<a href="index.html">
-					<span class="en">HOME</span>
-					<span class="ja">トップ</span>
-				</a>
-				<a href="service.html">
-					<span class="en">SERVICE</span>
-					<span class="ja">サービス</span>
-				</a>
-				<a href="seminar.html">
-					<span class="en">SEMINAR</span>
-					<span class="ja">セミナー</span>
-				</a>
-			</nav>
-			<div class="footer__sns">
-				<a href="https://www.tiktok.com/@garden.of.life4" target="_blank" rel="noopener" aria-label="TikTok">
-					<img src="./images/icon-tiktok.svg" alt="">
-				</a>
-				<a href="https://www.instagram.com/turtle.8694522" target="_blank" rel="noopener" aria-label="Instagram">
-					<img src="./images/icon-instagram.svg" alt="">
-				</a>
-				<a href="https://youtube.com/@gardenoflife-w2s" target="_blank" rel="noopener" aria-label="YouTube">
-					<img src="./images/icon-youtube.svg" alt="">
-				</a>
+			<div class="footer__right">
+				<nav class="footer__nav">
+					<a href="index.html">
+						<span class="en">HOME</span>
+						<span class="ja">トップ</span>
+					</a>
+					<a href="service.html">
+						<span class="en">SERVICE</span>
+						<span class="ja">サービス</span>
+					</a>
+					<a href="seminar.html">
+						<span class="en">SEMINAR</span>
+						<span class="ja">セミナー</span>
+					</a>
+				</nav>
+				<div class="footer__sns">
+					<a href="https://www.tiktok.com/@garden.of.life4" target="_blank" rel="noopener"
+						aria-label="TikTok">
+						<img src="./images/icon-tiktok.svg" alt="">
+					</a>
+					<a href="https://www.instagram.com/turtle.8694522" target="_blank" rel="noopener"
+						aria-label="Instagram">
+						<img src="./images/icon-instagram.svg" alt="">
+					</a>
+					<a href="https://youtube.com/@gardenoflife-w2s" target="_blank" rel="noopener" aria-label="YouTube">
+						<img src="./images/icon-youtube.svg" alt="">
+					</a>
+				</div>
 			</div>
 		</div>
 		<p class="footer__legal"><a href="privacy.html">プライバシーポリシー</a></p>

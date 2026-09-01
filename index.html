@@ -18,7 +18,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Prata&family=Italiana&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Prata&family=Marcellus&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
@@ -55,10 +55,16 @@
 						<span class="ja">セミナー</span>
 					</a></li>
 				</ul>
-				<a href="tel:07095104514" class="header__tel">
-					<img src="./images/icon-phone.svg" alt="">
-					<span>070-9510-4514</span>
-				</a>
+				<div class="header__actions">
+<a href="tel:07095104514" class="header__tel">
+						<img src="./images/icon-phone.svg" alt="">
+						<span>070-9510-4514</span>
+					</a>
+					<a href="https://lin.ee/QFpINyl" class="header__cta" target="_blank" rel="noopener">
+						<img src="./images/icon-line-navy.svg" alt="">
+						<span>CONTACT</span>
+					</a>
+				</div>
 			</nav>
 			<button class="header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
 				<span></span><span></span><span></span>
@@ -80,56 +86,33 @@
 			<div class="hero__content">
 				<h1 class="hero__title reveal">Growing a life,<br>like a garden.</h1>
 				<p class="hero__subtitle reveal">人生を庭のように、育てていく。</p>
+				<p class="hero__tags reveal">Web Design / Graphic / SNS Support / Life Seminar</p>
 			</div>
 		</section>
 		<!-- STORY -->
 		<section class="story" id="story">
 			<div class="deco-butterflies" aria-hidden="true">
-				<svg class="deco-butterfly"
-					style="top:12.1%;left:76.0%;width:63px;height:59px;transform:translate(-50%,-50%) rotate(-8deg);">
-					<use href="#deco-butterfly"></use>
-				</svg>
-				<svg class="deco-butterfly"
-					style="top:14.4%;left:21.2%;width:38px;height:48px;transform:translate(-50%,-50%) rotate(10deg);">
-					<use href="#deco-butterfly"></use>
-				</svg>
-				<svg class="deco-butterfly"
-					style="top:27.7%;left:79.6%;width:45px;height:55px;transform:translate(-50%,-50%) rotate(-14deg);">
-					<use href="#deco-butterfly"></use>
-				</svg>
-				<svg class="deco-butterfly"
-					style="top:39.3%;left:14.9%;width:59px;height:42px;transform:translate(-50%,-50%) rotate(6deg);">
-					<use href="#deco-butterfly"></use>
-				</svg>
-				<svg class="deco-butterfly"
-					style="top:57.4%;left:80.9%;width:45px;height:56px;transform:translate(-50%,-50%) rotate(-10deg);">
-					<use href="#deco-butterfly"></use>
-				</svg>
-				<svg class="deco-butterfly"
-					style="top:61.2%;left:18.2%;width:22px;height:28px;transform:translate(-50%,-50%) rotate(12deg);">
-					<use href="#deco-butterfly"></use>
-				</svg>
-				<svg class="deco-butterfly"
-					style="top:75.3%;left:22.1%;width:59px;height:43px;transform:translate(-50%,-50%) rotate(8deg);">
-					<use href="#deco-butterfly"></use>
-				</svg>
-				<svg class="deco-butterfly"
-					style="top:78.4%;left:75.0%;width:68px;height:63px;transform:translate(-50%,-50%) rotate(-6deg);">
-					<use href="#deco-butterfly"></use>
-				</svg>
+				<img class="story__butterflies-img" src="./images/story-butterflies.svg" alt="">
 			</div>
 			<div class="story__inner">
-				<h2 class="section-heading reveal">STORY</h2>
+				<h2 class="section-heading section-heading--wide reveal">STORY</h2>
+				<div class="story__lead reveal">
+					<p class="story__lead-line story__lead-line--offset">庭のようなもの</p>
+					<p class="story__lead-line">人生は、</p>
+				</div>
 				<div class="story__block reveal">
 					<h3 class="story__sub">origin</h3>
-					<p class="story__text"> 人生は、一つの庭のようなものです。<br> 土を耕し、種をまく日もあれば、思いがけず花が咲く日もあって、<br>
-						そんな一人ひとりの人生という庭に寄り添いたい、<br> その想いから、Garden of Lifeは生まれました。<br><br> Webサイトも、チラシも、SNSも、終活も。<br>
-						事業の形は違っても、根っこにある想いは一つです。 </p>
+					<p class="story__text">土を耕し、種をまく日もあれば、思いがけず花が咲く日もあって、<br>
+						そんな一人ひとりの人生という庭に寄り添いたい。<br>その想いから、Garden of Lifeは生まれました。</p>
+					<span class="story__divider" aria-hidden="true"></span>
+					<p class="story__text story__text--em">Webサイトも、チラシも、SNSも、終活も。<br>
+						事業の形は違っても、根っこにある想いは一つです。</p>
 				</div>
 				<div class="story__block story__block--right reveal">
 					<h3 class="story__sub">future</h3>
-					<p class="story__text"> 焦らなくていい、比べなくていい、<br> その人らしいペースで育てていけたら。<br><br> 出会った方の人生という庭に、<br>
-						光を届けられる存在でいられたらいいなと思っています。 </p>
+					<p class="story__text story__text--lead reveal">焦らなくていい。<br>比べなくていい。</p>
+					<p class="story__text story__text--narrow">その人らしいペースで、育てていけたら。<br>出会った方の人生という庭に、<br>
+						光を届けられる存在でいられたらいいなと思っています。</p>
 				</div>
 			</div>
 		</section>
@@ -143,9 +126,12 @@
 		<section class="brand">
 			<div class="brand__inner">
 				<img src="./images/logo-mark.svg" alt="Garden of Life" class="brand__mark reveal">
-				<p class="brand__text reveal"> Garden of Life
-					の頭文字「G」を、ひとつの庭を包み込む円としてデザインしました。円の中には花々や植物、蝶が調和しながら繋がり合い、お客様一人ひとりの人生という庭に、出会い・ご縁・成長が育まれていく様子を表現しています。蝶は変容や再生、そして幸せを運ぶ象徴。人生の節目に寄り添い、新たな一歩を優しく後押しする存在でありたいという想いを込めました。深いネイビーは、どんな暗闇にも光を灯す強さを、色鮮やかな花々はそれぞれ異なる個性や人生の輝きを表しています。彩り豊かな人生の庭を育てていく。それが
-					Garden of Life のブランドメッセージです。 </p>
+				<div class="brand__body">
+					<h2 class="brand__heading reveal">出会いとご縁が、<br>ひとつの庭に育っていく。</h2>
+					<p class="brand__text reveal">Garden of Lifeの「G」を、人生という庭を包み込む円としてデザインしました。<br>
+						花や植物は一人ひとりの個性と成長を、蝶は変容や再生、幸せを運ぶ象徴として。<br>
+						人生の節目に寄り添い、新しい一歩をそっと後押ししたい。そんな想いを、このロゴに込めています。</p>
+				</div>
 			</div>
 		</section>
 		<div class="marquee marquee--2">
@@ -154,6 +140,45 @@
 				<span>Where light meets bloom.</span>
 			</div>
 		</div>
+		<!-- SERVICE -->
+		<section class="service" id="service">
+			<img src="./images/service-butterfly-1.svg" alt="" class="service__butterfly service__butterfly--1">
+			<img src="./images/service-butterfly-2.svg" alt="" class="service__butterfly service__butterfly--2">
+			<div class="service__inner">
+				<h2 class="section-heading section-heading--stack section-heading--sm reveal">SERVICE <span
+						class="section-heading__sub">サービス内容</span></h2>
+				<ul class="service__list">
+					<li class="service__item reveal">
+						<span class="service__num">01</span>
+						<span class="service__name">WEB<br>DESIGN</span>
+						<span class="service__name-sub">ホームページ制作</span>
+						<p class="service__desc">想いや届けたい相手を丁寧に紐解き、世界観と情報設計の両面からWebサイトを制作します。</p>
+						<a href="service.html#design" class="service__arrow" aria-label="WEB DESIGNを見る">→</a>
+					</li>
+					<li class="service__item reveal">
+						<span class="service__num">02</span>
+						<span class="service__name">GRAPHIC<br>DESIGN</span>
+						<span class="service__name-sub">名刺・チラシ制作</span>
+						<p class="service__desc">名刺やチラシを、人と人とのご縁が始まる大切なツールとして丁寧にデザインします。</p>
+						<a href="service.html#design" class="service__arrow" aria-label="GRAPHIC DESIGNを見る">→</a>
+					</li>
+					<li class="service__item reveal">
+						<span class="service__num">03</span>
+						<span class="service__name">SNS<br>SUPPORT</span>
+						<span class="service__name-sub">SNS発信サポート</span>
+						<p class="service__desc">世界観や届けたい相手を整理し、無理なく続けられる発信を一緒に育てていきます。</p>
+						<a href="service.html#sns" class="service__arrow" aria-label="SNS SUPPORTを見る">→</a>
+					</li>
+					<li class="service__item reveal">
+						<span class="service__num">04</span>
+						<span class="service__name">LIFE<br>SEMINAR</span>
+						<span class="service__name-sub">終活セミナー</span>
+						<p class="service__desc">終活を「死の準備」ではなく、これからの人生や家族との時間を考えるきっかけとしてお伝えします。</p>
+						<a href="seminar.html" class="service__arrow" aria-label="LIFE SEMINARを見る">→</a>
+					</li>
+				</ul>
+			</div>
+		</section>
 		<!-- ABOUT -->
 		<section class="about" id="about">
 			<div class="deco-butterflies" aria-hidden="true">
@@ -175,7 +200,7 @@
 				</svg>
 			</div>
 			<div class="about__inner">
-				<h2 class="section-heading section-heading--row reveal">ABOUT <span
+				<h2 class="section-heading section-heading--stack reveal">ABOUT <span
 						class="section-heading__sub">会社概要</span>
 				</h2>
 				<div class="about__content">
@@ -218,110 +243,95 @@
 				</div>
 			</div>
 		</section>
-		<!-- SERVICE -->
-		<section class="service" id="service">
-			<img src="./images/butterflies-about.svg" alt="" class="service__butterflies">
-			<div class="service__inner">
-				<h2 class="section-heading section-heading--center reveal">SERVICE <span
-						class="section-heading__sub">サービス内容</span></h2>
-				<ul class="service__list">
-					<li class="service__item reveal">
-						<span class="service__num">01</span>
-						<span class="service__name">Design</span>
-						<p class="service__desc">Webサイトやチラシ制作、伝えたいことを、見た目から丁寧に形にします。</p>
-						<a href="service.html#design" class="service__arrow" aria-label="Designを見る">→</a>
-					</li>
-					<li class="service__item reveal">
-						<span class="service__num">02</span>
-						<span class="service__name">SNS</span>
-						<p class="service__desc">SNS運用を通して、想いやサービスの魅力をやさしく丁寧に届けます。</p>
-						<a href="service.html#sns" class="service__arrow" aria-label="SNSを見る">→</a>
-					</li>
-					<li class="service__item reveal">
-						<span class="service__num">03</span>
-						<span class="service__name">SEMINAR</span>
-						<p class="service__desc">不安なお気持ちにも寄り添いながら、安心して学べる時間をお届けします。</p>
-						<a href="seminar.html" class="service__arrow" aria-label="SEMINARを見る">→</a>
-					</li>
-				</ul>
-			</div>
-		</section>
 		<!-- REASON -->
 		<section class="reason" id="reason">
 			<div class="reason__inner">
-				<h2 class="section-heading reveal">REASON <span class="section-heading__sub">選ばれる理由</span></h2>
+				<h2 class="section-heading section-heading--stack reveal">OUR VALUES <span class="section-heading__sub">大切にしていること</span></h2>
 				<ul class="reason__list">
 					<li class="reason__item reveal">
-						<span class="reason__index">(01)</span>
-						<h3 class="reason__title">丁寧な対応</h3>
-						<p class="reason__text">些細なご相談にも、一つひとつ丁寧に向き合いご提案します。</p>
+						<div class="reason__head">
+							<span class="reason__index">(01)</span>
+							<h3 class="reason__title">想いから、一緒に考える。</h3>
+						</div>
+						<p class="reason__text">まだ言葉になっていない想いや理想も、丁寧にお話を伺いながら、一緒に整理していきます。</p>
 					</li>
 					<li class="reason__item reveal">
-						<span class="reason__index">(02)</span>
-						<h3 class="reason__title">専門知識</h3>
-						<p class="reason__text">Web・デザイン・終活まで、幅広い専門知識でサポートします。</p>
+						<div class="reason__head">
+							<span class="reason__index">(02)</span>
+							<h3 class="reason__title">その人らしさを、かたちに。</h3>
+						</div>
+						<p class="reason__text">想いや個性を大切にしながら、その人らしさが自然と伝わるかたちをご提案します。</p>
 					</li>
 					<li class="reason__item reveal">
-						<span class="reason__index">(03)</span>
-						<h3 class="reason__title">アフターフォロー</h3>
-						<p class="reason__text">納品後も更新や運用のご相談に、変わらず継続して対応いたします。</p>
+						<div class="reason__head">
+							<span class="reason__index">(03)</span>
+							<h3 class="reason__title">その先も、一緒に育てていく。</h3>
+						</div>
+						<p class="reason__text">つくって終わりではなく、その先の変化にも寄り添いながら、長く伴走できる関係を大切にしています。</p>
 					</li>
 					<li class="reason__item reveal">
-						<span class="reason__index">(04)</span>
-						<h3 class="reason__title">初めてでも安心</h3>
-						<p class="reason__text">何から始めればいいか分からない方も、丁寧にお話をうかがいます。</p>
+						<div class="reason__head">
+							<span class="reason__index">(04)</span>
+							<h3 class="reason__title">小さな一歩から、気軽に。</h3>
+						</div>
+						<p class="reason__text">まだ具体的に決まっていなくても大丈夫です。まずは今のお悩みや想いをお聞かせください。</p>
 					</li>
 				</ul>
 			</div>
 		</section>
 		<!-- CONTACT -->
 		<section class="contact" id="contact">
-			<img src="./images/butterflies-contact.svg" alt="" class="contact__butterflies">
+			<img src="./images/contact-butterflies.svg" alt="" class="contact__butterflies">
 			<div class="contact__inner">
-				<h2 class="section-heading reveal">CONTACT</h2>
-				<p class="contact__text reveal">まずはお電話でご相談ください</p>
+				<h2 class="contact__heading reveal">CONTACT</h2>
+				<p class="contact__text reveal">まだ具体的に決まっていなくても大丈夫です。<br>まずは、あなたの想いをお聞かせください。</p>
 				<div class="contact__cta">
 					<a href="tel:07095104514" class="contact__btn reveal">
 						<img src="./images/icon-phone.svg" alt="">
-						<span>CONTACT</span>
+						<span>070-9510-4514</span>
 					</a>
 					<a href="https://lin.ee/QFpINyl" class="contact__btn contact__btn--line reveal" target="_blank" rel="noopener">
-						<img src="./images/icon-line.svg" alt="">
-						<span>公式LINE</span>
+						<img src="./images/icon-line-navy.svg" alt="">
+						<span>CONTACT</span>
 					</a>
 				</div>
 			</div>
 		</section>
 	</main>
 	<footer class="footer">
+		<div class="deco-butterflies" aria-hidden="true">
+			<img class="footer__butterflies-img" src="./images/footer-butterflies.svg" alt="">
+		</div>
 		<div class="footer__inner">
 			<a href="index.html" class="footer__logo">
 				<img src="./images/logo-footer.png" alt="Garden of Life">
 			</a>
-			<nav class="footer__nav">
-				<a href="index.html">
-					<span class="en">HOME</span>
-					<span class="ja">トップ</span>
-				</a>
-				<a href="service.html">
-					<span class="en">SERVICE</span>
-					<span class="ja">サービス</span>
-				</a>
-				<a href="seminar.html">
-					<span class="en">SEMINAR</span>
-					<span class="ja">セミナー</span>
-				</a>
-			</nav>
-			<div class="footer__sns">
-				<a href="https://www.tiktok.com/@garden.of.life4" target="_blank" rel="noopener" aria-label="TikTok">
-					<img src="./images/icon-tiktok.svg" alt="">
-				</a>
-				<a href="https://www.instagram.com/turtle.8694522" target="_blank" rel="noopener" aria-label="Instagram">
-					<img src="./images/icon-instagram.svg" alt="">
-				</a>
-				<a href="https://youtube.com/@gardenoflife-w2s" target="_blank" rel="noopener" aria-label="YouTube">
-					<img src="./images/icon-youtube.svg" alt="">
-				</a>
+			<div class="footer__right">
+				<nav class="footer__nav">
+					<a href="index.html">
+						<span class="en">HOME</span>
+						<span class="ja">トップ</span>
+					</a>
+					<a href="service.html">
+						<span class="en">SERVICE</span>
+						<span class="ja">サービス</span>
+					</a>
+					<a href="seminar.html">
+						<span class="en">SEMINAR</span>
+						<span class="ja">セミナー</span>
+					</a>
+				</nav>
+				<div class="footer__sns">
+					<a href="https://www.tiktok.com/@garden.of.life4" target="_blank" rel="noopener" aria-label="TikTok">
+						<img src="./images/icon-tiktok.svg" alt="">
+					</a>
+					<a href="https://www.instagram.com/turtle.8694522" target="_blank" rel="noopener" aria-label="Instagram">
+						<img src="./images/icon-instagram.svg" alt="">
+					</a>
+					<a href="https://youtube.com/@gardenoflife-w2s" target="_blank" rel="noopener" aria-label="YouTube">
+						<img src="./images/icon-youtube.svg" alt="">
+					</a>
+				</div>
 			</div>
 		</div>
 		<p class="footer__legal"><a href="privacy.html">プライバシーポリシー</a></p>

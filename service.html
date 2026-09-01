@@ -11,14 +11,15 @@
 	<meta property="og:locale" content="ja_JP">
 	<meta property="og:site_name" content="Garden of Life">
 	<meta property="og:title" content="SERVICE | Garden of Life">
-	<meta property="og:description" content="Garden of LifeのSERVICEページ。Web制作・チラシ制作などのデザイン制作から、Instagram・LINEなどのSNS運用サポートまで、ヒアリングに基づいた丁寧なものづくりをご提供します。">
+	<meta property="og:description"
+		content="Garden of LifeのSERVICEページ。Web制作・チラシ制作などのデザイン制作から、Instagram・LINEなどのSNS運用サポートまで、ヒアリングに基づいた丁寧なものづくりをご提供します。">
 	<meta property="og:image" content="images/ogp.jpg">
 	<meta name="twitter:card" content="summary_large_image">
 	<link rel="icon" type="image/png" href="./images/favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link
-		href="https://fonts.googleapis.com/css2?family=Prata&family=Italiana&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap"
+		href="https://fonts.googleapis.com/css2?family=Prata&family=Marcellus&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Kaku+Gothic+Antique:wght@400;500;700&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
@@ -32,22 +33,28 @@
 			<nav class="header__nav">
 				<ul class="header__nav-list">
 					<li><a href="index.html">
-						<span class="en">HOME</span>
-						<span class="ja">トップ</span>
-					</a></li>
+							<span class="en">HOME</span>
+							<span class="ja">トップ</span>
+						</a></li>
 					<li><a href="service.html">
-						<span class="en">SERVICE</span>
-						<span class="ja">サービス</span>
-					</a></li>
+							<span class="en">SERVICE</span>
+							<span class="ja">サービス</span>
+						</a></li>
 					<li><a href="seminar.html">
-						<span class="en">SEMINAR</span>
-						<span class="ja">セミナー</span>
-					</a></li>
+							<span class="en">SEMINAR</span>
+							<span class="ja">セミナー</span>
+						</a></li>
 				</ul>
-				<a href="tel:07095104514" class="header__tel">
-					<img src="./images/icon-phone.svg" alt="">
-					<span>070-9510-4514</span>
-				</a>
+				<div class="header__actions">
+					<a href="tel:07095104514" class="header__tel">
+						<img src="./images/icon-phone.svg" alt="">
+						<span>070-9510-4514</span>
+					</a>
+					<a href="https://lin.ee/QFpINyl" class="header__cta" target="_blank" rel="noopener">
+						<img src="./images/icon-line-navy.svg" alt="">
+						<span>CONTACT</span>
+					</a>
+				</div>
 			</nav>
 			<button class="header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
 				<span></span><span></span><span></span>
@@ -65,96 +72,331 @@
 	<main>
 		<!-- PAGE HERO -->
 		<section class="page-hero">
-			<img src="./images/butterflies-hero.svg" alt="" class="page-hero__butterflies">
+			<img src="./images/Layer_1.svg" alt="" class="page-hero__butterflies">
 			<h1 class="page-hero__label reveal">SERVICE</h1>
-			<div class="page-hero__inner">
-				<p class="page-hero__ja reveal">わたしたちができること</p>
-				<p class="page-hero__en reveal">What we can do</p>
+		</section>
+		<!-- SERVICE INTRO -->
+		<section class="service-intro">
+			<div class="service-intro__inner reveal">
+				<p class="service-intro__label">OUR SERVICE</p>
+				<h2 class="service-intro__heading">想いを、かたちに。そして、育てていく。</h2>
+				<p class="service-intro__text">お客様の想いや大切にしていることを丁寧に紐解き、<br>その人らしさが伝わるかたちへ整えていきます。</p>
 			</div>
 		</section>
-		<!-- WORK: Design -->
-		<section class="work" id="design">
+		<!-- WORK: Web Design -->
+		<section class="work work--web" id="design">
 			<div class="work__inner">
-				<div class="work__head reveal">
-					<p class="work__label">01 — Design</p>
-					<h2 class="work__title">デザイン制作</h2>
-				</div>
 				<div class="work__list">
-					<article class="work-card reveal">
-						<div class="work-card__image">
-							<img src="./images/service/web.jpg" alt="Web制作のイメージ" loading="lazy" width="1000" height="750">
-						</div>
-						<div class="work-card__body">
-							<h3 class="work-card__title">Web制作</h3>
-							<p class="work-card__catch">初めてのホームページ制作も、寄り添いながら。</p>
-							<p class="work-card__text">
-								新規開設はもちろん、何も更新していないサイトのリニューアルにも対応。ヒアリングから提案・デザイン・制作まで一貫して担当し、公開後の更新サポートまで伴走します。</p>
-							<div class="flow">
-								<span class="flow__label">flow</span>
-								<ul class="flow__list">
-									<li class="flow__step"><span class="flow__step-num">1</span>ヒアリング・提案</li>
-									<li class="flow__step"><span class="flow__step-num">2</span>見積もり・契約</li>
-									<li class="flow__step"><span class="flow__step-num">3</span>全体設計</li>
-									<li class="flow__step"><span class="flow__step-num">4</span>デザイン設計</li>
-									<li class="flow__step"><span class="flow__step-num">5</span>実装</li>
-									<li class="flow__step"><span class="flow__step-num">6</span>納品</li>
-								</ul>
+					<article class="work-card work-card--web reveal">
+						<div class="work-card__top">
+							<div class="work-card__image">
+								<img src="./images/web_design.png" alt="Web制作のイメージ" loading="lazy" width="1011"
+									height="580">
+							</div>
+							<div class="work-card__body">
+								<p class="work-card__eyebrow"><span class="work-card__num">01</span>WEB DESIGN</p>
+								<h3 class="work-card__title"><span class="work-card__dot"
+										aria-hidden="true"></span>Web制作 <span class="work-card__price">¥150,000〜</span>
+								</h3>
+								<p class="work-card__catch">想いを、伝わるかたちへ。</p>
+								<p class="work-card__text">
+									はじめてのWeb制作も、まだイメージが固まっていない段階からでも。想いや届けたい相手を一緒に整理しながら、世界観と情報設計の両面から形にしていきます。</p>
 							</div>
 						</div>
-					</article>
-					<article class="work-card reveal">
-						<div class="work-card__image">
-							<img src="./images/service/flyer.jpg" alt="チラシ制作のイメージ" loading="lazy" width="1000" height="750">
-						</div>
-						<div class="work-card__body">
-							<h3 class="work-card__title">チラシ制作・名刺制作</h3>
-							<p class="work-card__catch">手に取ってもらえる、一枚を。</p>
-							<p class="work-card__text">集客チラシから会社案内まで、目的に合わせたデザインを制作。印刷データの入稿や部数のご相談にも対応します。</p>
-							<div class="flow">
-								<span class="flow__label">flow</span>
-								<ul class="flow__list">
-									<li class="flow__step"><span class="flow__step-num">1</span>ヒアリング・提案</li>
-									<li class="flow__step"><span class="flow__step-num">2</span>見積もり・契約</li>
-									<li class="flow__step"><span class="flow__step-num">3</span>全体設計</li>
-									<li class="flow__step"><span class="flow__step-num">4</span>デザイン設計</li>
-									<li class="flow__step"><span class="flow__step-num">5</span>実装</li>
-									<li class="flow__step"><span class="flow__step-num">6</span>納品</li>
-								</ul>
-							</div>
+						<div class="flow">
+							<img src="./images/deco-butterfly-a.svg" alt="" class="flow__butterfly flow__butterfly--1">
+							<img src="./images/deco-butterfly-b.svg" alt="" class="flow__butterfly flow__butterfly--2">
+							<img src="./images/deco-butterfly-c.svg" alt="" class="flow__butterfly flow__butterfly--3">
+							<img src="./images/deco-butterfly-a.svg" alt="" class="flow__butterfly flow__butterfly--4">
+							<img src="./images/butterfly_pink.svg" alt="" class="flow__deco"><span
+								class="flow__label">Flow</span>
+							<ol class="flow__list">
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-hearing.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">01.ヒアリング</p>
+										<p class="flow__step-text">想いや理想の世界観、届けたい相手についてじっくりお聞きします</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-concept.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">02.コンセプト設計</p>
+										<p class="flow__step-text">ヒアリング内容をもとに、サイトの軸・トーンを一緒に固めていきます</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-wireframe.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">03.構成・ワイヤーフレーム作成</p>
+										<p class="flow__step-text">ページ構成や情報の流れを設計します</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-design.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">04.デザイン制作</p>
+										<p class="flow__step-text">世界観を大切にしながら、ビジュアルに落とし込みます</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-coding.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">05.実装／公開</p>
+										<p class="flow__step-text">コーディング・動作確認を経て公開へ</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-support.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">06.公開後サポート</p>
+										<p class="flow__step-text">更新や運用のご相談も継続して伴走します</p>
+									</div>
+								</li>
+							</ol>
 						</div>
 					</article>
 				</div>
 			</div>
 		</section>
-		<!-- HIGHLIGHT BAND -->
-		<div class="highlight-band">
-			<p class="highlight-band__title reveal">Growing a life, like a garden.</p>
-			<p class="highlight-band__text reveal">一つひとつの依頼に、丁寧に向き合う。それがGarden of Lifeのものづくりです。</p>
-		</div>
+		<!-- WORK: Graphic Design -->
+		<section class="work work--graphic">
+			<div class="work__inner">
+				<div class="work__list">
+					<article class="work-card work-card--graphic reveal">
+						<div class="work-card__top">
+							<div class="work-card__image">
+								<img src="./images/graphic_design.png" alt="チラシ制作のイメージ" loading="lazy" width="1012"
+									height="580">
+							</div>
+							<div class="work-card__body">
+								<p class="work-card__eyebrow"><span class="work-card__num">02</span>GRAPHIC DESIGN</p>
+								<h3 class="work-card__title"><span class="work-card__dot"
+										aria-hidden="true"></span>名刺・チラシ制作 <span
+										class="work-card__price">¥20,000〜</span></h3>
+								<p class="work-card__catch">手に取ってもらえる、一枚を。</p>
+								<p class="work-card__text">
+									単なる印刷物ではなく、「はじめての一枚」として記憶に残るデザインを大切にしています。手にした人の心にそっと残るような、温度のある紙面づくりを心がけています。</p>
+							</div>
+						</div>
+						<div class="flow">
+							<img src="./images/deco-butterfly-a.svg" alt="" class="flow__butterfly flow__butterfly--1">
+							<img src="./images/deco-butterfly-b.svg" alt="" class="flow__butterfly flow__butterfly--2">
+							<img src="./images/deco-butterfly-c.svg" alt="" class="flow__butterfly flow__butterfly--3">
+							<img src="./images/deco-butterfly-a.svg" alt="" class="flow__butterfly flow__butterfly--4">
+							<img src="./images/butterfly_blue.svg" alt="" class="flow__deco"><span
+								class="flow__label">Flow</span>
+							<ol class="flow__list">
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-hearing.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">01.ヒアリング</p>
+										<p class="flow__step-text">使用シーン、渡したい相手、伝えたい印象をお聞きします</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-proposal.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">02.ラフ提案</p>
+										<p class="flow__step-text">方向性の異なる2〜3案でご提案します</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-design.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">03.デザイン制作</p>
+										<p class="flow__step-text">選んでいただいた方向性をもとに仕上げていきます</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-adjust.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">04.修正／調整</p>
+										<p class="flow__step-text">文字組み、余白、色味を丁寧に整えます</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-print.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">05.入稿／印刷</p>
+										<p class="flow__step-text">紙質や加工のご相談にも対応します</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-delivery.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">06.納品</p>
+										<p class="flow__step-text">データ納品／印刷物のお届けまでサポート</p>
+									</div>
+								</li>
+							</ol>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
 		<!-- WORK: SNS -->
-		<section class="work" id="sns">
+		<section class="work work--sns" id="sns">
 			<div class="work__inner">
 				<div class="work__list" style="margin-bottom:0;">
-					<article class="work-card work-card--feature reveal">
-						<div class="work-card__image">
-							<img src="./images/service/sns.jpg" alt="SNS運用のイメージ" loading="lazy" width="1000" height="750">
-						</div>
-						<div class="work-card__body">
-							<h3 class="work-card__title">SNS運用</h3>
-							<p class="work-card__catch">続けられる発信を、一緒に。</p>
-							<p class="work-card__text">
-								Instagram・LINEなどのSNS運用をサポート。投稿デザインの作成から、運用計画のご相談まで、無理なく続けられる発信の形をご提案します。</p>
-							<div class="flow">
-								<span class="flow__label">flow</span>
-								<ul class="flow__list">
-									<li class="flow__step"><span class="flow__step-num">1</span>ヒアリング・提案</li>
-									<li class="flow__step"><span class="flow__step-num">2</span>見積もり・契約</li>
-									<li class="flow__step"><span class="flow__step-num">3</span>運用設計</li>
-									<li class="flow__step"><span class="flow__step-num">4</span>投稿デザイン</li>
-									<li class="flow__step"><span class="flow__step-num">5</span>運用開始</li>
-									<li class="flow__step"><span class="flow__step-num">6</span>振り返り</li>
-								</ul>
+					<article class="work-card work-card--sns reveal">
+						<div class="work-card__top">
+							<div class="work-card__image">
+								<img src="./images/sns_support.png" alt="SNS運用のイメージ" loading="lazy" width="1011"
+									height="580">
 							</div>
+							<div class="work-card__body">
+								<p class="work-card__eyebrow"><span class="work-card__num">03</span>SNS SUPPORT</p>
+								<h3 class="work-card__title"><span class="work-card__dot"
+										aria-hidden="true"></span>SNS発信サポート <span
+										class="work-card__price">月額¥3,500/本〜</span></h3>
+								<p class="work-card__catch">発信を、続けられる仕組みに。</p>
+								<p class="work-card__text">
+									投稿ネタに困らない運用計画づくりから、写真・動画の撮影、投稿代行まで対応。無理なく続けられる発信の仕組みを一緒につくります。</p>
+							</div>
+						</div>
+						<div class="plans">
+							<p class="plans__label">MONTHLY PACK PLANS ／ 継続運用向け</p>
+							<div class="plans__list">
+								<div class="plan-card">
+									<p class="plan-card__tag">LIGHT</p>
+									<p class="plan-card__name">月8本パック</p>
+									<p class="plan-card__catch">お店で撮って編集はお任せ</p>
+									<p class="plan-card__price">¥48,000<span>/月</span></p>
+									<p class="plan-card__unit">1本¥6,000 × 8本(税抜)</p>
+									<ul class="plan-card__list">
+										<li>ショート動画：月8本</li>
+										<li>投稿ペース：週2本</li>
+										<li>撮影はお店側で対応</li>
+										<li>企画・台本・編集・投稿</li>
+										<li>月次レポート(振り返りなし)</li>
+									</ul>
+								</div>
+								<div class="plan-card plan-card--featured">
+									<p class="plan-card__tag">STANDARD</p>
+									<p class="plan-card__name">月12本パック</p>
+									<p class="plan-card__catch">継続運用のスイートスポット</p>
+									<p class="plan-card__price">¥72,000<span>/月</span></p>
+									<p class="plan-card__unit">1本¥6,000 × 12本(税抜)</p>
+									<ul class="plan-card__list">
+										<li>ショート動画：月12本</li>
+										<li>投稿ペース：週3本</li>
+										<li>撮影：月1回まとめ撮り</li>
+										<li>企画・台本・編集・投稿</li>
+										<li>月次レポート＋ZOOM振り返り30分</li>
+									</ul>
+								</div>
+								<div class="plan-card">
+									<p class="plan-card__tag">ACTIVE</p>
+									<p class="plan-card__name">月16本パック</p>
+									<p class="plan-card__catch">最速で第一想起を獲る</p>
+									<p class="plan-card__price">¥96,000<span>/月</span></p>
+									<p class="plan-card__unit">1本¥6,000 × 16本(税抜)</p>
+									<ul class="plan-card__list">
+										<li>ショート動画　月16本</li>
+										<li>投稿ペース 週4本</li>
+										<li>撮影：月1回まとめ撮り</li>
+										<li>企画・台本・編集・投稿</li>
+										<li>月次レポート＋ZOOM振り返り(時間無制限)</li>
+									</ul>
+								</div>
+							</div>
+							<div class="plans__list plans__list--option">
+								<div class="plan-card plan-card--option">
+									<p class="plan-card__tag">OPTION｜追加撮影プラン</p>
+									<p class="plan-card__name">撮影回数の追加、月最大+3回までOK</p>
+									<p class="plan-card__price">¥6,000<span>/追加撮影１回</span></p>
+									<ul class="plan-card__list">
+										<li>通常の月1回撮影は交通費不要</li>
+										<li>追加撮影は姫路市内は交通費不要/市外は別途頂戴します</li>
+									</ul>
+								</div>
+								<div class="plan-card plan-card--option">
+									<p class="plan-card__tag">SPECIAL｜初回サービス</p>
+									<p class="plan-card__name">初回2回まで撮影指導付き</p>
+									<ul class="plan-card__list">
+										<li>３ヶ月目以降は指導なし/全プラン：企画・台本付き</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="flow">
+							<img src="./images/deco-butterfly-a.svg" alt="" class="flow__butterfly flow__butterfly--1">
+							<img src="./images/deco-butterfly-b.svg" alt="" class="flow__butterfly flow__butterfly--2">
+							<img src="./images/deco-butterfly-c.svg" alt="" class="flow__butterfly flow__butterfly--3">
+							<img src="./images/deco-butterfly-a.svg" alt="" class="flow__butterfly flow__butterfly--4">
+							<img src="./images/butterfly_yellow.svg" alt="" class="flow__deco"><span
+								class="flow__label">Flow</span>
+							<ol class="flow__list">
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-hearing.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">01.ヒアリング</p>
+										<p class="flow__step-text">発信の目的、届けたい相手、大切にしたい世界観についてじっくりお聞きします</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-concept.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">02.アカウント／コンセプト設計</p>
+										<p class="flow__step-text">プロフィール文、アイコン、ハイライト構成など、"入口"の部分から一緒に整えていきます</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-design.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">03.投稿テーマ／トンマナ設計</p>
+										<p class="flow__step-text">投稿カテゴリ（想い／サービス／日常／お知らせ など）と、色味・フォント・言葉遣いのトーンを固めます</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-calendar.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">04.月間投稿プランの作成</p>
+										<p class="flow__step-text">1ヶ月分の投稿テーマ・スケジュールを一緒に組み立てていきます</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-design.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">05.投稿クリエイティブ制作</p>
+										<p class="flow__step-text">画像デザイン・キャプション作成をGarden of Lifeらしい温度感で仕上げます</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-support.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">06.投稿・運用サポート</p>
+										<p class="flow__step-text">予約投稿の設定や、投稿後のちょっとした調整もサポートします</p>
+									</div>
+								</li>
+								<li class="flow__step">
+									<span class="flow__step-icon"><img src="./images/flow/flow-icon-improve.svg"
+											alt=""></span>
+									<div class="flow__step-body">
+										<p class="flow__step-title">07.振り返り・改善</p>
+										<p class="flow__step-text">反応の良かった投稿や届いた声をもとに、次月の発信内容をブラッシュアップしていきます</p>
+									</div>
+								</li>
+							</ol>
 						</div>
 					</article>
 				</div>
@@ -162,52 +404,59 @@
 		</section>
 		<!-- CONTACT -->
 		<section class="contact" id="contact">
-			<img src="./images/butterflies-contact.svg" alt="" class="contact__butterflies">
+			<img src="./images/contact-butterflies.svg" alt="" class="contact__butterflies">
 			<div class="contact__inner">
-				<h2 class="section-heading reveal">CONTACT</h2>
-				<p class="contact__text reveal">まずはお電話でご相談ください</p>
+				<h2 class="contact__heading reveal">CONTACT</h2>
+				<p class="contact__text reveal">まだ具体的に決まっていなくても大丈夫です。<br>まずは、あなたの想いをお聞かせください。</p>
 				<div class="contact__cta">
 					<a href="tel:07095104514" class="contact__btn reveal">
 						<img src="./images/icon-phone.svg" alt="">
-						<span>CONTACT</span>
+						<span>070-9510-4514</span>
 					</a>
 					<a href="https://lin.ee/QFpINyl" class="contact__btn contact__btn--line reveal" target="_blank" rel="noopener">
-						<img src="./images/icon-line.svg" alt="">
-						<span>公式LINE</span>
+						<img src="./images/icon-line-navy.svg" alt="">
+						<span>CONTACT</span>
 					</a>
 				</div>
 			</div>
 		</section>
 	</main>
 	<footer class="footer">
+		<div class="deco-butterflies" aria-hidden="true">
+			<img class="footer__butterflies-img" src="./images/footer-butterflies.svg" alt="">
+		</div>
 		<div class="footer__inner">
 			<a href="index.html" class="footer__logo">
 				<img src="./images/logo-footer.png" alt="Garden of Life">
 			</a>
-			<nav class="footer__nav">
-				<a href="index.html">
-					<span class="en">HOME</span>
-					<span class="ja">トップ</span>
-				</a>
-				<a href="service.html">
-					<span class="en">SERVICE</span>
-					<span class="ja">サービス</span>
-				</a>
-				<a href="seminar.html">
-					<span class="en">SEMINAR</span>
-					<span class="ja">セミナー</span>
-				</a>
-			</nav>
-			<div class="footer__sns">
-				<a href="https://www.tiktok.com/@garden.of.life4" target="_blank" rel="noopener" aria-label="TikTok">
-					<img src="./images/icon-tiktok.svg" alt="">
-				</a>
-				<a href="https://www.instagram.com/turtle.8694522" target="_blank" rel="noopener" aria-label="Instagram">
-					<img src="./images/icon-instagram.svg" alt="">
-				</a>
-				<a href="https://youtube.com/@gardenoflife-w2s" target="_blank" rel="noopener" aria-label="YouTube">
-					<img src="./images/icon-youtube.svg" alt="">
-				</a>
+			<div class="footer__right">
+				<nav class="footer__nav">
+					<a href="index.html">
+						<span class="en">HOME</span>
+						<span class="ja">トップ</span>
+					</a>
+					<a href="service.html">
+						<span class="en">SERVICE</span>
+						<span class="ja">サービス</span>
+					</a>
+					<a href="seminar.html">
+						<span class="en">SEMINAR</span>
+						<span class="ja">セミナー</span>
+					</a>
+				</nav>
+				<div class="footer__sns">
+					<a href="https://www.tiktok.com/@garden.of.life4" target="_blank" rel="noopener"
+						aria-label="TikTok">
+						<img src="./images/icon-tiktok.svg" alt="">
+					</a>
+					<a href="https://www.instagram.com/turtle.8694522" target="_blank" rel="noopener"
+						aria-label="Instagram">
+						<img src="./images/icon-instagram.svg" alt="">
+					</a>
+					<a href="https://youtube.com/@gardenoflife-w2s" target="_blank" rel="noopener" aria-label="YouTube">
+						<img src="./images/icon-youtube.svg" alt="">
+					</a>
+				</div>
 			</div>
 		</div>
 		<p class="footer__legal"><a href="privacy.html">プライバシーポリシー</a></p>

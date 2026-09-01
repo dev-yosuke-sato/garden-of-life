@@ -9,72 +9,123 @@
 	position: relative;
 	overflow: hidden;
 	background: v.$gradient-contact;
-	padding: 100px 20px;
-	text-align: center;
-}
-
-.contact__butterflies {
-	position: absolute;
-	top: 0;
-	left: -40px;
-	width: 40%;
-	max-width: 560px;
-	pointer-events: none;
-}
-
-.contact__inner {
-	position: relative;
-	z-index: 1;
-}
-
-.contact__text {
-	font-size: 16px;
-	letter-spacing: 0.1em;
-	margin-top: 20px;
-}
-
-.contact__cta {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-	max-width: 640px;
-	margin: 40px auto 0;
-	gap: 20px;
-}
-
-.contact__btn {
-	display: inline-flex;
-	align-items: center;
+	padding: 100px 130px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
 	justify-content: center;
-	gap: 12px;
-	padding: 18px 24px;
-	border: 1px solid v.$color-navy;
-	border-radius: 80px;
-	font-family: v.$font-serif;
-	font-size: 16px;
-	letter-spacing: 0.1em;
-	color: v.$color-navy;
-	transition: background-color .2s, color .2s, border-color .2s;
+
+	@media (max-width: v.$bp-md) {
+		padding: 80px 40px;
+	}
+
+	@media (max-width: v.$bp-sm) {
+		padding: 60px 24px;
+		align-items: center;
+	}
+
+	&__butterflies {
+		position: absolute;
+		top: 0;
+		left: 49px;
+		width: 608px;
+		max-width: 42.2%;
+		pointer-events: none;
+
+		// モバイルでは中央寄せの縦積みレイアウトになるため、見出しに重ならないよう
+		// 通常フローに戻して見出しの上に配置する。
+		@media (max-width: v.$bp-sm) {
+			position: static;
+			display: block;
+			width: 220px;
+			max-width: 60%;
+			margin: 0 auto 16px;
+		}
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		text-align: right;
+		max-width: 1180px;
+		width: 100%;
+
+		@media (max-width: v.$bp-sm) {
+			align-items: center;
+			text-align: center;
+		}
+	}
+
+	&__heading {
+		font-family: v.$font-marcellus;
+		font-weight: 400;
+		font-size: 100px;
+		line-height: 1;
+		letter-spacing: 0.05em;
+		color: rgba(255, 255, 255, 0.8);
+
+		@media (max-width: v.$bp-md) {
+			font-size: 64px;
+		}
+
+		@media (max-width: v.$bp-sm) {
+			font-size: 48px;
+		}
+	}
+
+	&__text {
+		font-family: v.$font-sans;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 2;
+		letter-spacing: 0.1em;
+		color: #fff;
+		max-width: 494px;
+		margin-top: 56px;
+	}
+
+	&__cta {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-top: 56px;
+
+		@media (max-width: v.$bp-sm) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	&__btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		width: 220px;
+		height: 60px;
+		border-radius: 80px;
+		font-family: v.$font-marcellus;
+		font-size: 16px;
+		letter-spacing: 0.05em;
+		color: v.$color-navy;
+		background: linear-gradient(356.77deg, rgba(158, 201, 211, 0.8) -37.95%, rgba(231, 244, 247, 0.8) 96.39%);
+		transition: background .2s;
+
+		img { width: 20px; height: 20px; }
+
+		&:hover {
+			background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6));
+		}
+
+		&--line {
+			background: linear-gradient(352.66deg, #E7DCE6 56.41%, #FBFBFB 107.62%);
+
+			&:hover {
+				background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6));
+			}
+		}
+	}
 }
-
-.contact__btn img { width: 15px; height: 20px; filter: brightness(0) invert(1); }
-
-.contact__btn:hover {
-	background-color: v.$color-cream;
-	color: v.$color-navy;
-}
-.contact__btn:hover img { filter: none; }
-
-.contact__btn--line {
-	border-color: #06C755;
-	background-color: #06C755;
-	color: v.$color-cream;
-}
-
-.contact__btn--line img { width: 20px; height: 20px; filter: brightness(0) invert(1); }
-
-.contact__btn--line:hover {
-	background-color: v.$color-cream;
-	border-color: #06C755;
-	color: #06C755;
-}
-.contact__btn--line:hover img { filter: none; }

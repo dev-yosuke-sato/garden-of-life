@@ -6,109 +6,150 @@
    Footer
 ======================================== */
 .footer {
-	background: v.$gradient-header;
-	padding: 50px 40px 30px;
-}
-
-.footer__inner {
-	max-width: 1360px;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 1fr auto 1fr;
-	align-items: center;
-	gap: 20px;
-}
-
-.footer__logo { justify-self: start; }
-.footer__logo img { height: 40px; width: auto; }
-
-.footer__nav {
-	justify-self: center;
-	display: flex;
-	gap: 40px;
-	font-family: v.$font-italiana;
-	font-size: 16px;
-	letter-spacing: 0.05em;
-}
-
-.footer__nav a {
 	position: relative;
-	display: grid;
-	justify-items: center;
 	overflow: hidden;
-	text-transform: uppercase;
-}
+	background: linear-gradient(89.91deg, #ECE2EB 2.14%, #C4D3DD 51.03%, #F2CACA 99.91%);
+	padding: 40px 130px 20px;
 
-.footer__nav a span {
-	display: block;
-	grid-area: 1 / 1;
-	white-space: nowrap;
-	transition: transform .4s ease, opacity .4s ease;
-}
-
-.footer__nav a .en {
-	transform: translateY(0);
-}
-
-.footer__nav a .ja {
-	transform: translateY(100%);
-	opacity: 0;
-}
-
-.footer__nav a:hover .en {
-	transform: translateY(-100%);
-	opacity: 0;
-}
-
-.footer__nav a:hover .ja {
-	transform: translateY(0);
-	opacity: 1;
-}
-
-.footer__sns {
-	justify-self: end;
-	display: flex;
-	align-items: center;
-	gap: 20px;
-}
-
-.footer__sns a {
-	display: inline-flex;
-	opacity: .75;
-	transition: opacity .2s;
-}
-
-.footer__sns a:hover { opacity: 1; }
-
-.footer__sns img { display: block; height: 20px; width: auto; }
-
-.footer__legal {
-	text-align: center;
-	margin-top: 24px;
-	font-size: 12px;
-	letter-spacing: 0.05em;
-	color: v.$color-navy;
-}
-
-.footer__legal a { opacity: .75; transition: opacity .2s; }
-.footer__legal a:hover { opacity: 1; text-decoration: underline; }
-
-.footer__copyright {
-	text-align: center;
-	font-family: v.$font-italiana;
-	font-weight: 400;
-	font-size: 12px;
-	letter-spacing: 0.05em;
-	margin-top: 12px;
-	color: v.$color-navy;
-}
-
-@media (max-width: v.$bp-sm) {
-	.footer__inner {
-		display: flex;
-		flex-direction: column;
-		text-align: center;
+	@media (max-width: v.$bp-md) {
+		padding: 40px 40px 20px;
 	}
-	.footer__logo, .footer__sns { justify-self: unset; }
-	.footer__nav { gap: 24px; }
+
+	@media (max-width: v.$bp-sm) {
+		padding: 40px 24px 20px;
+	}
+
+	&__butterflies-img {
+		position: absolute;
+		top: 8.1%;
+		left: 29.5%;
+		width: 124px;
+		height: auto;
+
+		// モバイルではfooter__innerが縦積みになり全体が縦に伸びるため、
+		// %指定の位置がロゴ/ナビと衝突する。装飾要素なので非表示にする。
+		@media (max-width: v.$bp-sm) {
+			display: none;
+		}
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: v.$bp-sm) {
+			flex-direction: column;
+			gap: 24px;
+			text-align: center;
+		}
+	}
+
+	&__logo img { height: 40px; width: auto; }
+
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+
+		@media (max-width: v.$bp-sm) {
+			flex-direction: column;
+			gap: 24px;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		gap: 40px;
+		font-family: v.$font-marcellus;
+		font-size: 16px;
+		letter-spacing: 0.05em;
+
+		@media (max-width: v.$bp-sm) {
+			gap: 24px;
+		}
+
+		a {
+			position: relative;
+			display: grid;
+			justify-items: center;
+			overflow: hidden;
+			text-transform: uppercase;
+
+			span {
+				display: block;
+				grid-area: 1 / 1;
+				white-space: nowrap;
+				transition: transform .4s ease, opacity .4s ease;
+			}
+
+			.en {
+				transform: translateY(0);
+			}
+
+			.ja {
+				transform: translateY(100%);
+				opacity: 0;
+			}
+
+			&:hover {
+				.en {
+					transform: translateY(-100%);
+					opacity: 0;
+				}
+
+				.ja {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__sns {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+
+		a {
+			display: inline-flex;
+			opacity: .75;
+			transition: opacity .2s;
+
+			&:hover { opacity: 1; }
+		}
+
+		img { display: block; height: 20px; width: auto; }
+	}
+
+	&__legal {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		margin-top: 24px;
+		font-size: 12px;
+		letter-spacing: 0.05em;
+		color: v.$color-navy;
+
+		a {
+			opacity: .75;
+			transition: opacity .2s;
+
+			&:hover { opacity: 1; text-decoration: underline; }
+		}
+	}
+
+	&__copyright {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		font-family: v.$font-marcellus;
+		font-weight: 400;
+		font-size: 12px;
+		letter-spacing: 0.05em;
+		margin-top: 12px;
+		color: v.$color-navy;
+	}
 }

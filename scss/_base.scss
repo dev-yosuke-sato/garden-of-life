@@ -5,82 +5,110 @@
 /* ========================================
    Reset & Base
 ======================================== */
-*, *::before, *::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	font-family: v.$font-sans;
-	color: v.$color-navy;
-	font-size: 16px;
-	line-height: 1.8;
-	background-color: v.$color-base;
-	overflow-x: hidden;
+  font-family: v.$font-sans;
+  color: v.$color-navy;
+  font-size: 16px;
+  line-height: 1.8;
+  background-color: v.$color-base;
+  overflow-x: hidden;
 }
 
 img {
-	display: block;
-	max-width: 100%;
-	height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
-ul { list-style: none; }
+ul {
+  list-style: none;
+}
 
 .section-heading {
-	font-family: v.$font-serif;
-	font-weight: 400;
-	font-size: 64px;
-	line-height: 1.1;
-	text-align: center;
-	color: v.$color-navy;
-	display: flex;
-	align-items: baseline;
-	justify-content: center;
-	gap: 20px;
-	flex-wrap: wrap;
-}
+  font-family: v.$font-marcellus;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: v.$color-navy;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 
-.section-heading--row { justify-content: flex-start; }
+  &--row {
+    justify-content: flex-start;
+  }
 
-.section-heading__sub {
-	font-family: v.$font-sans;
-	font-size: 16px;
-	letter-spacing: 0.1em;
-	color: v.$color-navy;
+  &--sm {
+    font-size: 56px;
+  }
+
+  &--wide {
+    letter-spacing: 0.1em;
+  }
+
+  &--stack {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__sub {
+    font-family: 'Yu Gothic', 'YuGothic', v.$font-sans;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+  }
+
+  @media (max-width: v.$bp-md) {
+    font-size: 44px;
+  }
+
+  @media (max-width: v.$bp-sm) {
+    font-size: 32px;
+    gap: 10px;
+  }
 }
 
 /* ========================================
    装飾（編み目パターン・蝶々）
 ======================================== */
 .deco-butterflies {
-	position: absolute;
-	inset: 0;
-	overflow: hidden;
-	pointer-events: none;
-	z-index: 0;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .deco-butterfly {
-	position: absolute;
-	color: #9FCAD4;
-	opacity: .55;
+  position: absolute;
+  color: #9fcad4;
+  opacity: 0.55;
 }
 
-@media (max-width: v.$bp-md) {
-	.section-heading { font-size: 44px; }
-}
-
-@media (max-width: v.$bp-sm) {
-	.section-heading { font-size: 32px; gap: 10px; }
+.deco-butterfly-img {
+  position: absolute;
+  opacity: 0.85;
 }

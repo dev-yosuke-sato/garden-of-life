@@ -15,72 +15,92 @@
 	transition: opacity .6s ease;
 }
 
-.js .page-transition {
-	opacity: 1;
-}
-
-.js body.is-loaded .page-transition {
-	opacity: 0;
-}
-
-.js body.is-leaving .page-transition {
-	opacity: 1;
-	pointer-events: auto;
-	transition: opacity .45s ease;
-}
-
-.js main {
-	opacity: 0;
-	transform: translateY(28px);
-	transition: opacity .9s cubic-bezier(.22, .61, .36, 1), transform .9s cubic-bezier(.22, .61, .36, 1);
-}
-
-.js body.is-loaded main {
-	opacity: 1;
-	transform: translateY(0);
-}
-
-.js body.is-leaving main {
-	opacity: 0;
-	transform: translateY(-16px);
-	transition: opacity .4s ease, transform .4s ease;
-}
-
-@media (prefers-reduced-motion: reduce) {
-	.js .page-transition,
-	.js main {
-		transition: opacity .2s linear !important;
-		transform: none !important;
-	}
-}
-
-/* ========================================
-   スクロールフェードイン（reveal）
-======================================== */
-.js .reveal {
-	opacity: 0;
-	transform: translateY(36px);
-	transition: opacity .9s ease, transform .9s ease;
-	will-change: opacity, transform;
-}
-
-.js .reveal.is-inview {
-	opacity: 1;
-	transform: translateY(0);
-}
-
-@for $i from 1 through 8 {
-	.js .service__list > .reveal:nth-child(#{$i}),
-	.js .reason__list > .reveal:nth-child(#{$i}),
-	.js .work__list > .reveal:nth-child(#{$i}) {
-		transition-delay: $i * .1s;
-	}
-}
-
-@media (prefers-reduced-motion: reduce) {
-	.js .reveal {
+.js {
+	.page-transition {
 		opacity: 1;
-		transform: none;
-		transition: none;
 	}
+
+	body.is-loaded .page-transition {
+		opacity: 0;
+	}
+
+	body.is-leaving .page-transition {
+		opacity: 1;
+		pointer-events: auto;
+		transition: opacity .45s ease;
+	}
+
+	main {
+		opacity: 0;
+		transform: translateY(28px);
+		transition: opacity .9s cubic-bezier(.22, .61, .36, 1), transform .9s cubic-bezier(.22, .61, .36, 1);
+	}
+
+	body.is-loaded main {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	body.is-leaving main {
+		opacity: 0;
+		transform: translateY(-16px);
+		transition: opacity .4s ease, transform .4s ease;
+	}
+
+	.page-transition,
+	main {
+		@media (prefers-reduced-motion: reduce) {
+			transition: opacity .2s linear !important;
+			transform: none !important;
+		}
+	}
+
+	/* ========================================
+	   スクロールフェードイン（reveal）
+	======================================== */
+	.reveal {
+		opacity: 0;
+		transform: translateY(36px);
+		transition: opacity .9s ease, transform .9s ease;
+		will-change: opacity, transform;
+
+		&.is-inview {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			opacity: 1;
+			transform: none;
+			transition: none;
+		}
+	}
+
+	@for $i from 1 through 8 {
+		.service__list > .reveal:nth-child(#{$i}),
+		.reason__list > .reveal:nth-child(#{$i}),
+		.work__list > .reveal:nth-child(#{$i}) {
+			transition-delay: $i * .1s;
+		}
+	}
+
+	/* ========================================
+	   STORY: 見出し→縦書き→本文の順に少し遅れてfade-up
+	======================================== */
+	.story__inner {
+		> .reveal:nth-child(1) { transition-delay: 0s; }    // STORY見出し
+		> .reveal:nth-child(2) { transition-delay: 0s; }    // 縦書き（人生は、庭のようなもの）：見出しと一気に表示
+		> .reveal:nth-child(3) { transition-delay: .25s; }  // 本文（origin）
+		> .reveal:nth-child(4) { transition-delay: .3s; }   // 本文（future）
+	}
+
+	.story__text--lead.reveal {
+		transition-delay: .45s; // 「焦らなくていい。比べなくていい。」は本文より少し遅れて
+	}
+
+	/* ========================================
+	   BRAND: ロゴ→見出し→説明の順に少し遅れてfade-up
+	======================================== */
+	.brand__body > .reveal:nth-child(1) { transition-delay: .15s; } // 見出し
+	.brand__body > .reveal:nth-child(2) { transition-delay: .3s; }  // 説明
 }

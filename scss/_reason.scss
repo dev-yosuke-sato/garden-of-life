@@ -7,53 +7,79 @@
 ======================================== */
 .reason {
 	background: v.$gradient-reason;
-	padding: 100px 20px 120px;
-}
+	padding: 100px 130px 120px;
 
-.reason__inner {
-	max-width: 1000px;
-	margin: 0 auto;
-}
+	@media (max-width: v.$bp-md) {
+		padding: 80px 40px 100px;
+	}
 
-.reason__list {
-	margin-top: 60px;
-	display: flex;
-	flex-direction: column;
-}
+	@media (max-width: v.$bp-sm) {
+		padding: 60px 24px 80px;
+	}
 
-.reason__item {
-	display: grid;
-	grid-template-columns: 90px 220px 1fr;
-	align-items: center;
-	gap: 20px;
-	padding: 32px 0;
-	border-top: 1px solid rgba(v.$color-navy, 0.3);
-}
+	&__inner {
+		max-width: 1180px;
+		margin: 0 auto;
+	}
 
-.reason__item:last-child { border-bottom: 1px solid rgba(v.$color-navy, 0.3); }
+	&__list {
+		margin-top: 60px;
+		display: flex;
+		flex-direction: column;
+	}
 
-.reason__index {
-	font-family: v.$font-serif;
-	font-size: 12px;
-	letter-spacing: 0.1em;
-}
+	&__item {
+		display: flex;
+		align-items: center;
+		gap: 100px;
+		padding: 32px 0;
+		border-top: 1px solid rgba(v.$color-navy, 0.3);
 
-.reason__title {
-	font-family: v.$font-serif;
-	font-weight: 400;
-	font-size: 26px;
-}
+		&:last-child { border-bottom: 1px solid rgba(v.$color-navy, 0.3); }
 
-.reason__text {
-	font-size: 14px;
-	line-height: 1.8;
-}
+		@media (max-width: v.$bp-md) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 12px;
+		}
+	}
 
-@media (max-width: v.$bp-md) {
-	.reason__item { grid-template-columns: 60px 1fr; grid-template-rows: auto auto; }
-	.reason__text { grid-column: 1 / -1; }
-}
+	&__head {
+		display: flex;
+		align-items: center;
+		gap: 21px;
+		width: 456px;
+		flex-shrink: 0;
 
-@media (max-width: v.$bp-sm) {
-	.reason__item { grid-template-columns: 1fr; }
+		@media (max-width: v.$bp-md) {
+			width: auto;
+		}
+	}
+
+	&__index {
+		font-family: v.$font-sans;
+		font-weight: 500;
+		font-size: 12px;
+		letter-spacing: 0.1em;
+	}
+
+	&__title {
+		font-family: v.$font-sans;
+		font-weight: 400;
+		font-size: 26px;
+	}
+
+	&__text {
+		width: 425px;
+		max-width: 425px;
+		font-family: v.$font-sans;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 1.8;
+
+		@media (max-width: v.$bp-md) {
+			width: auto;
+			max-width: none;
+		}
+	}
 }

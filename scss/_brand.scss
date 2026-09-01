@@ -8,38 +8,72 @@
 .brand {
 	background-color: v.$color-pink;
 	padding: 90px 40px;
-}
 
-.brand__inner {
-	max-width: 1100px;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	gap: 70px;
-}
+	@media (max-width: v.$bp-sm) {
+		padding: 60px 20px;
+	}
 
-.brand__mark {
-	width: 200px;
-	flex-shrink: 0;
-}
+	&__inner {
+		max-width: 1100px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		gap: 70px;
 
-.brand__text {
-	flex: 1;
-	min-width: 0;
-	font-size: 16px;
-	line-height: 2.5;
-	text-align: left;
-	padding-inline: 4%;
-	color: v.$color-navy;
-}
+		@media (max-width: v.$bp-md) {
+			gap: 40px;
+		}
 
-@media (max-width: v.$bp-md) {
-	.brand__inner { gap: 40px; }
-	.brand__mark { width: 150px; }
-}
+		@media (max-width: v.$bp-sm) {
+			flex-direction: column;
+			text-align: center;
+			gap: 24px;
+		}
+	}
 
-@media (max-width: v.$bp-sm) {
-	.brand { padding: 60px 20px; }
-	.brand__inner { flex-direction: column; text-align: center; gap: 24px; }
-	.brand__mark { width: 140px; }
+	&__mark {
+		width: 200px;
+		flex-shrink: 0;
+
+		@media (max-width: v.$bp-md) {
+			width: 150px;
+		}
+
+		@media (max-width: v.$bp-sm) {
+			width: 140px;
+		}
+	}
+
+	&__body {
+		flex: 1;
+		min-width: 0;
+		padding-inline: 4%;
+	}
+
+	&__heading {
+		font-family: 'Yu Gothic', 'YuGothic', v.$font-sans;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 2;
+		letter-spacing: 0.1em;
+		text-align: left;
+		color: v.$color-navy;
+		margin-bottom: 24px;
+
+		@media (max-width: v.$bp-sm) {
+			text-align: center;
+			font-size: 16px;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 2.5;
+		text-align: left;
+		color: v.$color-navy;
+
+		@media (max-width: v.$bp-sm) {
+			text-align: center;
+		}
+	}
 }

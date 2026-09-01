@@ -1,0 +1,138 @@
+@charset 'UTF-8';
+
+@use 'variables' as v;
+
+/* ========================================
+   Plans（SNS月額パックプラン）
+   Figmaのdev-mode CSSに準拠（border #E9D3AB, price #DE649C, 本文16px）
+======================================== */
+.plans {
+  &__label {
+    font-family: v.$font-marcellus;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: v.$color-navy;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: v.$bp-md) {
+      grid-template-columns: 1fr;
+    }
+
+    &--option {
+      margin-top: 20px;
+      grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: v.$bp-md) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}
+
+.plan-card {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid #e9d3ab;
+  border-radius: 20px;
+  padding: 40px 24px;
+
+  &--featured {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  &__tag {
+    font-family: v.$font-marcellus;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    color: v.$color-navy;
+  }
+
+  &__name {
+    margin-top: 8px;
+    font-family: v.$font-sans;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+  }
+
+  &__catch {
+    margin-top: 8px;
+    font-family: 'Yu Gothic', 'YuGothic', v.$font-sans;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+  }
+
+  &__price {
+    margin-top: 16px;
+    font-family: v.$font-marcellus;
+    font-weight: 400;
+    font-size: 26px;
+    letter-spacing: 0.05em;
+    color: #de649c;
+
+    span {
+      font-family: v.$font-sans;
+      font-size: 16px;
+      font-weight: 500;
+      color: v.$color-navy;
+      margin-left: 2px;
+    }
+  }
+
+  &__unit {
+    margin-top: 4px;
+    font-family: 'Yu Gothic', 'YuGothic', v.$font-sans;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      font-family: 'Yu Gothic', 'YuGothic', v.$font-sans;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.6;
+      letter-spacing: 0.1em;
+      color: v.$color-navy;
+
+      &::before {
+        content: '◆';
+        position: absolute;
+        left: 0;
+        font-size: 10px;
+        color: #de649c;
+        top: 6px;
+      }
+
+      & + li {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &--option {
+    .plan-card__name {
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}

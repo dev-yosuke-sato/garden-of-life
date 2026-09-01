@@ -3,176 +3,429 @@
 @use 'variables' as v;
 
 /* ========================================
+   Service Intro（OUR SERVICE）
+======================================== */
+.service-intro {
+  background: linear-gradient(180deg, #e3dbe5 0%, v.$color-base 100%);
+  padding: 70px 130px 60px;
+  text-align: left;
+
+  @media (max-width: v.$bp-sm) {
+    padding: 50px 24px 40px;
+  }
+
+  &__inner {
+    max-width: 680px;
+  }
+
+  &__label {
+    font-family: v.$font-marcellus;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    color: v.$color-navy;
+  }
+
+  &__heading {
+    margin-top: 8px;
+    font-family: 'Yu Gothic', 'YuGothic', v.$font-sans;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+
+    @media (max-width: v.$bp-sm) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+
+  &__text {
+    margin-top: 8px;
+    max-width: fit-content;
+    font-family: v.$font-sans;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+  }
+}
+
+/* ========================================
    Work（サービス詳細）
+   Figmaのdev-mode CSSに準拠したセクションごとの実装。
+   01 WEB DESIGN=pink(#DE649C) / 02 GRAPHIC DESIGN=cyan(#73C8E3) / 03 SNS SUPPORT=yellow(#F4C572)、
+   flowアイコンの縁取り・接続線のみ03だけwhiteになる。
 ======================================== */
 .work {
-	background: v.$gradient-work;
-	padding: 100px 20px 60px;
-}
+  padding: 80px 130px;
+  background-color: v.$color-base;
 
-.work__inner {
-	max-width: 1100px;
-	margin: 0 auto;
-}
+  @media (max-width: v.$bp-md) {
+    padding: 60px 40px;
+  }
 
-.work__head {
-	text-align: center;
-	margin-bottom: 60px;
-}
+  @media (max-width: v.$bp-sm) {
+    padding: 50px 20px;
+  }
 
-.work__label {
-	font-family: v.$font-serif;
-	font-style: italic;
-	font-size: 16px;
-	color: v.$color-rose;
-	letter-spacing: 0.05em;
-}
+  &--graphic {
+    background: linear-gradient(90deg, #ece2eb 2%, #c4d3dd 51%, #f2caca 100%);
+  }
 
-.work__title {
-	margin-top: 8px;
-	font-family: v.$font-serif;
-	font-weight: 400;
-	font-size: 40px;
-	color: v.$color-navy;
-}
+  &--sns {
+    background: v.$gradient-work;
+  }
 
-.work__list {
-	display: flex;
-	flex-direction: column;
-	gap: 40px;
-	margin-bottom: 40px;
+  &__inner {
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
 }
 
 .work-card {
-	display: flex;
-	align-items: stretch;
-	gap: 48px;
-	background-color: v.$color-cream-deep;
-	border-radius: 32px;
-	padding: 48px;
-	box-shadow: 0 10px 30px rgba(v.$color-navy, 0.08);
+  // Figmaの「top container」「flow container」（SNSは「Frame 6826」も）は
+  // それぞれ独立した縦積みのブロックのため、カード全体は縦方向のcolumnにする。
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+
+  // アクセントカラー（見出し番号・ドット）
+  &--web {
+    --accent: #de649c;
+    --flow-accent: #de649c;
+  }
+  &--graphic {
+    --accent: #73c8e3;
+    --flow-accent: #73c8e3;
+  }
+  &--sns {
+    --accent: #f4c572;
+    --flow-accent: #ffffff;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 96px;
+
+    @media (max-width: v.$bp-md) {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  // Figma上、Web DesignとSNS Supportは「本文→画像」の順(画像が右側)、
+  // Graphic Designのみ「画像→本文」の順(画像が左側)になっている。HTMLの並び順(画像→本文)は
+  // 共通のまま、見た目の並びだけをrow-reverseで切り替える。
+  &--web .work-card__top,
+  &--sns .work-card__top {
+    @media (min-width: (v.$bp-md + 1px)) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 506px;
+    max-width: 100%;
+    aspect-ratio: 506 / 290;
+    overflow: hidden;
+    background-color: rgba(v.$color-navy, 0.06);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: v.$bp-md) {
+      width: 100%;
+    }
+  }
+
+  &--web .work-card__image,
+  &--sns .work-card__image {
+    border-radius: 80px 0;
+  }
+
+  &--graphic .work-card__image {
+    border-radius: 0 80px 0 80px;
+  }
+
+  &__body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: v.$font-marcellus;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.05em;
+    color: v.$color-navy;
+  }
+
+  &__deco {
+    width: 18px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  &__num {
+    color: var(--accent);
+  }
+
+  &__title {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+    font-family: v.$font-marcellus;
+    font-weight: 400;
+    font-size: 28px;
+    color: v.$color-navy;
+  }
+
+  &__dot {
+    align-self: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  &__price {
+    font-family: v.$font-marcellus;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+  }
+
+  &__catch {
+    margin-top: 16px;
+    font-family: v.$font-sans;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+  }
+
+  &__text {
+    margin-top: 16px;
+    font-family: v.$font-sans;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+  }
 }
 
-.work-card--feature {
-	background: v.$gradient-work-feature;
-}
+/* ========================================
+   Flow（工程）
+======================================== */
+.flow {
+  position: relative;
 
-.work-card--feature .work-card__title,
-.work-card--feature .work-card__catch {
-	color: v.$color-navy;
-}
+  &__butterfly {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    width: 50px;
+    height: auto;
 
-.work-card__image {
-	flex-shrink: 0;
-	width: 280px;
-	border-radius: 20px;
-	overflow: hidden;
-	background-color: rgba(v.$color-navy, 0.06);
-}
+    &--1 {
+      top: 12%;
+      right: 20.2%;
+      width: 50px;
+      transform: rotate(-15deg);
+    }
+    &--2 {
+      top: 47.4%;
+      right: 13.5%;
+      width: 64px;
+      transform: rotate(12deg);
+    }
+    &--3 {
+      top: 77.8%;
+      right: 25.2%;
+      width: 56px;
+      transform: rotate(-8deg);
+    }
+    &--4 {
+      top: 96.6%;
+      right: 11.3%;
+      width: 38px;
+      transform: rotate(18deg);
+    }
 
-.work-card__image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
+    @media (max-width: v.$bp-md) {
+      display: none;
+    }
+  }
 
-.work-card__image--placeholder {
-	min-height: 220px;
-	background: linear-gradient(135deg, rgba(v.$color-navy, 0.08), rgba(199,107,144,0.12));
-}
+  &__deco {
+    display: inline-block;
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 24px;
+  }
 
-.work-card__body {
-	flex: 1;
-	min-width: 0;
-}
+  &__label {
+    display: inline-block;
+    font-family: v.$font-marcellus;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    color: v.$color-navy;
+    margin-bottom: 24px;
+    vertical-align: middle;
+  }
 
-.work-card__title {
-	font-family: v.$font-serif;
-	font-weight: 400;
-	font-size: 30px;
-	color: v.$color-navy;
-}
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-.work-card__catch {
-	margin-top: 14px;
-	font-size: 18px;
-	font-weight: 500;
-	color: v.$color-rose;
-}
+  &__step {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding-bottom: 30px;
 
-.work-card__text {
-	margin-top: 18px;
-	font-size: 14px;
-	line-height: 2;
-}
+    &::before {
+      content: '';
+      position: absolute;
+      top: 80px;
+      left: 39.5px;
+      width: 1px;
+      bottom: 0;
+      background-color: var(--flow-accent, #{v.$color-rose});
+    }
 
-.flow { margin-top: 32px; }
+    &:last-child {
+      padding-bottom: 0;
 
-.flow__label {
-	display: inline-block;
-	font-family: v.$font-serif;
-	font-style: italic;
-	font-size: 14px;
-	color: v.$color-rose;
-	border-bottom: 1px solid v.$color-rose;
-	padding-bottom: 6px;
-	margin-bottom: 18px;
-}
+      &::before {
+        display: none;
+      }
+    }
+  }
 
-.flow__list {
-	display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	gap: 16px;
-}
+  &__step-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: v.$color-base;
+    border: 1px solid var(--flow-accent, #{v.$color-rose});
+    z-index: 1;
 
-.flow__step {
-	border: 1px solid rgba(v.$color-navy, 0.2);
-	border-radius: 10px;
-	padding: 12px 6px;
-	text-align: center;
-	font-size: 11px;
-	line-height: 1.5;
-	background-color: rgba(255,255,255,0.5);
-}
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
 
-.flow__step-num {
-	display: block;
-	font-family: v.$font-serif;
-	font-size: 13px;
-	color: v.$color-rose;
-	margin-bottom: 4px;
-}
+  &__step-body {
+    flex: 1;
+    padding-top: 8px;
+  }
 
-.highlight-band {
-	text-align: center;
-	padding: 70px 20px;
-	background-color: v.$color-navy;
-}
+  &__step-title {
+    font-family: v.$font-sans;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: #de649c;
+  }
 
-.highlight-band__title {
-	font-family: v.$font-serif;
-	font-style: italic;
-	font-size: 30px;
-	color: v.$color-cream;
-}
+  &__step-text {
+    margin-top: 8px;
+    font-family: v.$font-sans;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 0.1em;
+    color: v.$color-navy;
+  }
 
-.highlight-band__text {
-	margin-top: 16px;
-	font-size: 14px;
-	color: rgba(v.$color-cream, 0.8);
-}
+  // Graphicカードは上部が画像=左/本文=右のため、Flowのアイコン+リストも
+  // 本文カラムの開始位置(画像506px+gap72px=578px≒48.98%)に合わせてインデントする。
+  // これにより左側に上部画像と同じ余白ができ、蝶の装飾がそこに収まる。
+  .work-card--graphic & {
+    &__deco,
+    &__list {
+      margin-left: 48.98%;
+    }
 
-@media (max-width: v.$bp-md) {
-	.work-card { flex-direction: column; }
-	.work-card__image { width: 100%; height: 220px; }
-	.flow__list { grid-template-columns: repeat(3, 1fr); }
-}
+    .flow__butterfly {
+      right: auto;
 
-@media (max-width: v.$bp-sm) {
-	.work { padding: 70px 16px 40px; }
-	.work__title { font-size: 28px; }
-	.work-card { padding: 28px; border-radius: 20px; }
-	.flow__list { grid-template-columns: repeat(2, 1fr); }
+      &--1 {
+        left: 20.2%;
+      }
+      &--2 {
+        left: 13.5%;
+      }
+      &--3 {
+        left: 25.2%;
+      }
+      &--4 {
+        left: 11.3%;
+      }
+    }
 
-	.highlight-band__title { font-size: 22px; }
+    @media (max-width: v.$bp-md) {
+      &__deco,
+      &__list {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media (max-width: v.$bp-sm) {
+    &__step {
+      gap: 16px;
+    }
+
+    &__step-icon {
+      width: 56px;
+      height: 56px;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &__step::before {
+      top: 56px;
+      left: 27.5px;
+    }
+  }
 }
