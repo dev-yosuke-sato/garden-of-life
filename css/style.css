@@ -337,9 +337,10 @@ ul {
   font-family: "Marcellus", serif;
   font-size: 18px;
 }
-.sp-nav__tel {
-  font-family: "Marcellus", serif;
-  font-size: 18px;
+.sp-nav__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 @media (max-width: 1024px) {
   .sp-nav {

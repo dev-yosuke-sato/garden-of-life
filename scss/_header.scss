@@ -258,9 +258,10 @@
 		font-size: 18px;
 	}
 
-	&__tel {
-		font-family: v.$font-marcellus;
-		font-size: 18px;
+	&__actions {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
 	}
 
 	@media (max-width: v.$bp-md) {
