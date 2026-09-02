@@ -213,12 +213,16 @@ if (revealItems.length) {
 			},
 			{ threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
 		);
-		revealItems.forEach((el) => observer.observe(el));
 
-		// バックグラウンドタブ等でIntersectionObserverが発火しない場合の保険
-		window.setTimeout(() => {
-			revealItems.forEach((el) => el.classList.add('is-inview'));
-		}, 4000);
+		// フォント・画像の読み込み完了を待ってから監視を開始する。
+		// 先に監視すると、読み込み中のレイアウトのずれで実際より上にある判定になり、
+		// スクロール前に誤って表示されてしまうことがあるため。
+		Promise.all([
+			document.fonts ? document.fonts.ready : Promise.resolve(),
+			document.readyState === 'complete' ? Promise.resolve() : new Promise((resolve) => window.addEventListener('load', resolve)),
+		]).then(() => {
+			revealItems.forEach((el) => observer.observe(el));
+		});
 	} else {
 		revealItems.forEach((el) => el.classList.add('is-inview'));
 	}
