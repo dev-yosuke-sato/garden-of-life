@@ -79,7 +79,8 @@
 	@for $i from 1 through 8 {
 		.service__list > .reveal:nth-child(#{$i}),
 		.reason__list > .reveal:nth-child(#{$i}),
-		.work__list > .reveal:nth-child(#{$i}) {
+		.work__list > .reveal:nth-child(#{$i}),
+		.flow__list > .reveal:nth-child(#{$i}) {
 			transition-delay: $i * .1s;
 		}
 	}

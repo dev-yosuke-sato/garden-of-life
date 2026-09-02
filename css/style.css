@@ -2814,42 +2814,50 @@ ul {
 }
 .js .service__list > .reveal:nth-child(1),
 .js .reason__list > .reveal:nth-child(1),
-.js .work__list > .reveal:nth-child(1) {
+.js .work__list > .reveal:nth-child(1),
+.js .flow__list > .reveal:nth-child(1) {
   transition-delay: 0.1s;
 }
 .js .service__list > .reveal:nth-child(2),
 .js .reason__list > .reveal:nth-child(2),
-.js .work__list > .reveal:nth-child(2) {
+.js .work__list > .reveal:nth-child(2),
+.js .flow__list > .reveal:nth-child(2) {
   transition-delay: 0.2s;
 }
 .js .service__list > .reveal:nth-child(3),
 .js .reason__list > .reveal:nth-child(3),
-.js .work__list > .reveal:nth-child(3) {
+.js .work__list > .reveal:nth-child(3),
+.js .flow__list > .reveal:nth-child(3) {
   transition-delay: 0.3s;
 }
 .js .service__list > .reveal:nth-child(4),
 .js .reason__list > .reveal:nth-child(4),
-.js .work__list > .reveal:nth-child(4) {
+.js .work__list > .reveal:nth-child(4),
+.js .flow__list > .reveal:nth-child(4) {
   transition-delay: 0.4s;
 }
 .js .service__list > .reveal:nth-child(5),
 .js .reason__list > .reveal:nth-child(5),
-.js .work__list > .reveal:nth-child(5) {
+.js .work__list > .reveal:nth-child(5),
+.js .flow__list > .reveal:nth-child(5) {
   transition-delay: 0.5s;
 }
 .js .service__list > .reveal:nth-child(6),
 .js .reason__list > .reveal:nth-child(6),
-.js .work__list > .reveal:nth-child(6) {
+.js .work__list > .reveal:nth-child(6),
+.js .flow__list > .reveal:nth-child(6) {
   transition-delay: 0.6s;
 }
 .js .service__list > .reveal:nth-child(7),
 .js .reason__list > .reveal:nth-child(7),
-.js .work__list > .reveal:nth-child(7) {
+.js .work__list > .reveal:nth-child(7),
+.js .flow__list > .reveal:nth-child(7) {
   transition-delay: 0.7s;
 }
 .js .service__list > .reveal:nth-child(8),
 .js .reason__list > .reveal:nth-child(8),
-.js .work__list > .reveal:nth-child(8) {
+.js .work__list > .reveal:nth-child(8),
+.js .flow__list > .reveal:nth-child(8) {
   transition-delay: 0.8s;
 }
 .js .story__inner > .reveal:nth-child(1) {
