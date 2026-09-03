@@ -1211,6 +1211,15 @@ ul {
   transform: translateY(0);
   opacity: 1;
 }
+@media (max-width: 1024px) {
+  .footer__nav a .en {
+    display: none;
+  }
+  .footer__nav a .ja {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .footer__sns {
   display: flex;
   align-items: center;

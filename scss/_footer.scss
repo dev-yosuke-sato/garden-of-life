@@ -105,6 +105,19 @@
 					opacity: 1;
 				}
 			}
+
+			// タップ操作にはホバーがなく英語表記のまま切り替わらないため、
+			// ハンバーガーメニューに切り替わる幅以下では最初から日本語表記にする
+			@media (max-width: v.$bp-md) {
+				.en {
+					display: none;
+				}
+
+				.ja {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
 		}
 	}
 
