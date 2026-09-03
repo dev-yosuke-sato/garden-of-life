@@ -1,0 +1,23 @@
+# HTML/CSS/JSは常に最新を取得させ、キャッシュに残った古いファイルが
+# 表示され続ける問題（今回のfooterナブ日本語化など）を防ぐ。
+# 画像はほぼ更新されないため、引き続き長めにキャッシュしてパフォーマンスを確保する。
+
+<IfModule mod_expires.c>
+	ExpiresActive On
+
+	ExpiresByType text/html "access plus 0 seconds"
+	ExpiresByType text/css "access plus 0 seconds"
+	ExpiresByType application/javascript "access plus 0 seconds"
+	ExpiresByType text/javascript "access plus 0 seconds"
+
+	ExpiresByType image/png "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/svg+xml "access plus 1 month"
+	ExpiresByType image/x-icon "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+	<FilesMatch "\.(html|css|js)$">
+		Header set Cache-Control "no-cache, must-revalidate"
+	</FilesMatch>
+</IfModule>
